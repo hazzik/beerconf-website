@@ -42,6 +42,12 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\packages\Iesi.Collections.3.1.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="MvcExtensions">
+      <HintPath>..\..\lib\MvcExtensions\MvcExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcExtensions.Windsor">
+      <HintPath>..\..\lib\MvcExtensions\MvcExtensions.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\packages\NHibernate.3.1.0.4000\lib\Net35\NHibernate.dll</HintPath>
     </Reference>
