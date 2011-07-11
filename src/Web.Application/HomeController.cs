@@ -7,7 +7,11 @@ namespace Web.Application
     {
         public ActionResult Index()
         {
-            return new EmptyResult();
+            return View();
+        }
+        public ActionResult Registration()
+        {
+            return View();
         }
     }
 }
