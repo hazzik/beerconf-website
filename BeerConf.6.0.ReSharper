@@ -128,4 +128,36 @@
       <Abbreviation Text="GMT" />
     </Naming2>
   </CodeStyleSettings>
+  <SharedSolutionTemplateManager>
+    <LiveTemplates>
+      <Template uid="8597be02-e845-4792-8b66-bb9ef8583faa" shortcut="migr" description="" text="[FluentMigrator.MigrationAttribute($ts$)]&#xD;&#xA;public class Migration$ts$ : FluentMigrator.Migration&#xD;&#xA;{&#xD;&#xA;    public override void Up()&#xD;&#xA;    {&#xD;&#xA;        $END$&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    public override void Down()&#xD;&#xA;    {&#xD;&#xA;    }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+        <Scopes>
+          <Scope type="Everywhere" />
+          <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+        </Scopes>
+        <Categories />
+        <Variables>
+          <Variable name="ts" expression="getCurrentTime(&quot;yyyyMMddHHmm&quot;)" initialRange="0" />
+        </Variables>
+        <CustomProperties />
+      </Template>
+    </LiveTemplates>
+    <FileTemplates>
+      <Template uid="279d3462-f62b-43e3-87ec-8e88892cee2a" shortcut="" description="Migration" text="namespace $ns$&#xD;&#xA;{&#xD;&#xA;    [FluentMigrator.MigrationAttribute($ts$)]&#xD;&#xA;    public class Migration$ts$ : FluentMigrator.Migration&#xD;&#xA;    {&#xD;&#xA;        public override void Up()&#xD;&#xA;        {&#xD;&#xA;            $END$&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;        public override void Down()&#xD;&#xA;        {&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+        <Scopes>
+          <Scope type="InCSharpProjectFile" />
+        </Scopes>
+        <Categories />
+        <Variables>
+          <Variable name="ns" expression="fileDefaultNamespace()" initialRange="0" />
+          <Variable name="ts" expression="getCurrentTime(&quot;yyyyMMddHHmm&quot;)" initialRange="0" />
+        </Variables>
+        <CustomProperties>
+          <Property key="FileName" value="NewMigration" />
+          <Property key="Extension" value="cs" />
+          <Property key="ValidateFileName" value="True" />
+        </CustomProperties>
+      </Template>
+    </FileTemplates>
+  </SharedSolutionTemplateManager>
 </Configuration>
