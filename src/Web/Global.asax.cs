@@ -1,8 +1,8 @@
-﻿namespace Web
+﻿namespace BeerConf.Web
 {
     using System.Web.Mvc;
     using System.Web.Routing;
-    using BeerConf.Migrations;
+    using Migrations;
     using MvcExtensions.Windsor;
 
     public class MvcApplication : WindsorMvcApplication

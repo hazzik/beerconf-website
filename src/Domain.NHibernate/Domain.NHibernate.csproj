@@ -8,8 +8,8 @@
     <ProjectGuid>{309CA85F-743C-4ECF-B21D-7C497556EE9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Domain.NHibernate</RootNamespace>
-    <AssemblyName>Domain.NHibernate</AssemblyName>
+    <RootNamespace>BeerConf.Domain.NHibernate</RootNamespace>
+    <AssemblyName>BeerConf.Domain.NHibernate</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -55,12 +55,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conventions\ColumnNameUpperCaseConvention.cs" />
+    <Compile Include="Conventions\CustomManyToManyTableNameConvention.cs" />
+    <Compile Include="Conventions\ForeignKeyColumnNameConvention.cs" />
+    <Compile Include="Conventions\ForeignKeyConstraintNameConvention.cs" />
+    <Compile Include="Conventions\NameConventions.cs" />
+    <Compile Include="Conventions\PrimaryKeyConvention.cs" />
+    <Compile Include="Conventions\EntityConvention.cs" />
+    <Compile Include="Conventions\HasManyConvention.cs" />
+    <Compile Include="INHibernateConfigurer.cs" />
+    <Compile Include="ISessionProvider.cs" />
+    <Compile Include="NHibernateConfigurer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionProvider.cs" />
+    <Compile Include="Overrides\UserOverride.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{EC166CCA-E2DE-49E0-9CCC-EBE6AAE548A7}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
