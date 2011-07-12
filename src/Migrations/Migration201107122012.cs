@@ -27,7 +27,7 @@
         {
             Delete.Table("EVENT_PARTICIPANTS");
             Delete.Table("EVENTS");
-            Delete.Table("USER");
+            Delete.Table("USERS");
         }
     }
 }
