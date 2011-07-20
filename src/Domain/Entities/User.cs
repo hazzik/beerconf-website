@@ -1,5 +1,7 @@
 namespace BeerConf.Domain.Entities
 {
+    using Brandy.Core;
+
     public class User : IEntity
     {
         public virtual string Name { get; set; }

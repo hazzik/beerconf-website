@@ -2,8 +2,9 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using Brandy.Core;
 
-	public class Event : IEntity
+    public class Event : IEntity
     {
         private readonly ICollection<User> participants = new List<User>();
 

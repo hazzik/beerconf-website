@@ -1,6 +1,5 @@
 ﻿namespace Domain.NHibernate.Tests
 {
-    using System.IO;
     using BeerConf.Domain.NHibernate;
     using Xunit;
     using global::NHibernate.Cfg;
@@ -11,8 +10,8 @@
         [Fact]
         public void GenerateCreationScript()
         {
-            Configuration configuration = new NHibernateConfigurer().Configure();
-            var exportOutput = new StringWriter();
+            Configuration configuration = new NHibernateConfigurator().Configure();
+
             new SchemaExport(configuration)
                 .SetDelimiter("\r\nGO\r\n")
                 .Execute(true, false, false);

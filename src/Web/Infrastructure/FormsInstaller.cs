@@ -1,24 +1,28 @@
 namespace BeerConf.Web.Infrastructure
 {
-	using Application.Forms;
-	using Castle.Facilities.TypedFactory;
-	using Castle.MicroKernel.Registration;
-	using Castle.MicroKernel.SubSystems.Configuration;
-	using Castle.Windsor;
+    using Brandy.Web.Forms;
+    using Castle.Facilities.TypedFactory;
+    using Castle.MicroKernel.Registration;
+    using Castle.MicroKernel.SubSystems.Configuration;
+    using Castle.Windsor;
 
-	public class FormsInstaller : IWindsorInstaller
-	{
-		public void Install(IWindsorContainer container, IConfigurationStore store)
-		{
-			container.AddFacility<TypedFactoryFacility>();
+    public class FormsInstaller : IWindsorInstaller
+    {
+        #region IWindsorInstaller Members
 
-			BasedOnDescriptor formHandlers = AllTypes.FromAssemblyNamed("BeerConf.Web.Application")
-				.BasedOn(typeof (IFormHandler<>))
-				.WithService.AllInterfaces()
-				.Configure(x => x.LifeStyle.Transient);
+        public void Install(IWindsorContainer container, IConfigurationStore store)
+        {
+            container.AddFacility<TypedFactoryFacility>();
 
-			container.Register(formHandlers,
-			                   Component.For<IFormHandlerFactory>().AsFactory());
-		}
-	}
+            BasedOnDescriptor formHandlers = AllTypes.FromAssemblyNamed("BeerConf.Web.Application")
+                .BasedOn(typeof (IFormHandler<>))
+                .WithService.AllInterfaces()
+                .Configure(x => x.LifeStyle.Transient);
+
+            container.Register(formHandlers,
+                               Component.For<IFormHandlerFactory>().AsFactory());
+        }
+
+        #endregion
+    }
 }

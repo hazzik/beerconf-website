@@ -1,12 +1,15 @@
 ﻿namespace BeerConf.Web.Application.Events
 {
-	using Forms;
+    using Brandy.Web.Forms;
 
-	public class NewEventFormHandler : IFormHandler<NewEventForm>
-	{
-		public void Handle(NewEventForm form)
-		{
+    public class NewEventFormHandler : IFormHandler<NewEventForm>
+    {
+        #region IFormHandler<NewEventForm> Members
 
-		}
-	}
+        public void Handle(NewEventForm form)
+        {
+        }
+
+        #endregion
+    }
 }
