@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\EventsController.cs" />
+    <Compile Include="Events\NewEventFormHandler.cs" />
     <Compile Include="Forms\FormControllerBase.cs" />
     <Compile Include="Forms\IForm.cs" />
     <Compile Include="Forms\IFormHandler.cs" />
