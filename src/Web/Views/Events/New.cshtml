@@ -1,0 +1,9 @@
+﻿@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Что-то пошло не так");
+	@Html.EditorForModel()	
+	<input type="submit"/>
+}
+
+
+

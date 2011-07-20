@@ -1,9 +1,8 @@
-﻿using System;
-using System.Web.Mvc;
-
-namespace Web.Application
+﻿namespace BeerConf.Web.Application
 {
-    public class HomeController : Controller
+	using System.Web.Mvc;
+
+	public class HomeController : Controller
     {
         public ActionResult Index()
         {

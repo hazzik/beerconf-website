@@ -1,0 +1,4 @@
+﻿@using BeerConf.Web.Application.Metadata
+@model DateTime?
+
+@Html.TextBoxFor(_ => _, ViewData.ModelMetadata.GetAdditionalSettingOrCreateNew<DatePickerSettings>().ToHtmlAttributes())

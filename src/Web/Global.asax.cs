@@ -3,10 +3,22 @@
     using System.Web.Mvc;
     using System.Web.Routing;
     using Migrations;
+    using MvcExtensions;
     using MvcExtensions.Windsor;
 
     public class MvcApplication : WindsorMvcApplication
     {
+    	public MvcApplication()
+    	{
+    		Bootstrapper.BootstrapperTasks
+    			.Include<RegisterModelMetadata>()
+    			.Include<RegisterControllers>() /*
+                         .Include<ConfigureFilterAttributes>()
+                         .Include<ConfigureModelBinders>()*/
+    			/*.Include<RegisterMapProfiles>()
+				.Include<RegisterRoutes>()*/;
+    	}
+
         private static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
@@ -32,6 +44,7 @@
             RegisterGlobalFilters(GlobalFilters.Filters);
 
             RegisterRoutes(RouteTable.Routes);
-        }
+
+		}
     }
 }
