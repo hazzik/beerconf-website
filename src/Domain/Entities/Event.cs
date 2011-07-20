@@ -14,7 +14,7 @@
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
 
-        public IEnumerable<User> Participants
+        public virtual IEnumerable<User> Participants
         {
             get { return participants; }
         }
