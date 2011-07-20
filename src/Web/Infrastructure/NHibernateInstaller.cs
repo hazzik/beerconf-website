@@ -1,5 +1,6 @@
 namespace BeerConf.Web.Infrastructure
 {
+    using Brandy.Core;
     using Brandy.NHibernate;
     using Castle.Core;
     using Castle.MicroKernel.Registration;
@@ -14,7 +15,8 @@ namespace BeerConf.Web.Infrastructure
 
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<INHibernateConfigurator>().ImplementedBy<NHibernateConfigurator>(),
+            container.Register(Component.For(typeof (IRepository<>)).ImplementedBy(typeof (NHibernateRepository<>)),
+                               Component.For<INHibernateConfigurator>().ImplementedBy<NHibernateConfigurator>(),
                                Component.For<ISessionProvider>().ImplementedBy<DefaultSessionProvider>().LifeStyle.PerWebRequest);
 
             container.Register(Component.For<ISessionFactory>()

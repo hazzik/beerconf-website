@@ -5,7 +5,7 @@
 	using System.Reflection;
 	using Xunit;
 
-	public class CheckFormsAndHandlersIntegration
+    public class CheckFormsAndHandlersIntegration
 	{
 		[Fact]
 		public void AllFormsShouldHaveOneAndOnlyOneHandler()

@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Brandy.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Brandy\Brandy.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Brandy.NHibernate">
       <HintPath>..\..\lib\Brandy\Brandy.NHibernate.dll</HintPath>
     </Reference>
