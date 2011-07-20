@@ -5,7 +5,6 @@
     using FluentNHibernate.Automapping;
     using FluentNHibernate.Cfg;
     using FluentNHibernate.Cfg.Db;
-    using global::Domain;
     using global::NHibernate.Cfg;
 
     public class NHibernateConfigurer : INHibernateConfigurer

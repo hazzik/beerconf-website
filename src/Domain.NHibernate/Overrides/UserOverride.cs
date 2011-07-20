@@ -1,10 +1,10 @@
 namespace BeerConf.Domain.NHibernate.Overrides
 {
-    using FluentNHibernate.Automapping;
+	using Entities;
+	using FluentNHibernate.Automapping;
     using FluentNHibernate.Automapping.Alterations;
-    using global::Domain.Entities;
 
-    public class UserOverride : IAutoMappingOverride<Event>
+	public class UserOverride : IAutoMappingOverride<Event>
     {
         #region IAutoMappingOverride<Event> Members
 

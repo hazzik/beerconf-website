@@ -1,4 +1,4 @@
-namespace Domain.Entities
+namespace BeerConf.Domain.Entities
 {
     public class User : IEntity
     {

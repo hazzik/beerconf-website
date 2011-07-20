@@ -1,4 +1,4 @@
-﻿namespace Domain
+﻿namespace BeerConf.Domain
 {
     public interface IEntity
     {
