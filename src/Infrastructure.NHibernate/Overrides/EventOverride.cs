@@ -1,6 +1,6 @@
-﻿namespace BeerConf.Domain.NHibernate.Overrides
+﻿namespace BeerConf.Infrastructure.NHibernate.Overrides
 {
-    using Entities;
+    using Domain.Entities;
     using FluentNHibernate.Automapping;
     using FluentNHibernate.Automapping.Alterations;
 
@@ -13,6 +13,9 @@
 
             mapping.Map(x => x.End)
                 .Column("END_DATE");
+
+            mapping.HasManyToMany(x => x.Participants)
+                .Table("EVENT_PARTICIPANTS");
         }
     }
 }

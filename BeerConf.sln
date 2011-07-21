@@ -5,13 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\Web\Web.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{EC166CCA-E2DE-49E0-9CCC-EBE6AAE548A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.NHibernate", "src\Domain.NHibernate\Domain.NHibernate.csproj", "{309CA85F-743C-4ECF-B21D-7C497556EE9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.NHibernate", "src\Infrastructure.NHibernate\Infrastructure.NHibernate.csproj", "{309CA85F-743C-4ECF-B21D-7C497556EE9E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Application", "src\Web.Application\Web.Application.csproj", "{A4ADC02B-2C38-4065-907E-E1065A946F66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "src\Domain.Tests\Domain.Tests.csproj", "{16168C68-B946-46C8-8426-DE9568830A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.NHibernate.Tests", "src\Domain.NHibernate.Tests\Domain.NHibernate.Tests.csproj", "{2DEA0AF1-0A60-4763-BE87-610CF800E63B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.NHibernate.Tests", "src\Infrastructure.NHibernate.Tests\Infrastructure.NHibernate.Tests.csproj", "{2DEA0AF1-0A60-4763-BE87-610CF800E63B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Application.Tests", "src\Web.Application.Tests\Web.Application.Tests.csproj", "{C32C89AF-25B6-491C-9A0A-970E68512580}"
 EndProject

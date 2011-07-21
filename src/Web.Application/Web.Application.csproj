@@ -38,6 +38,7 @@
     <Reference Include="Brandy.Web">
       <HintPath>..\..\lib\Brandy\Brandy.Web.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="MvcExtensions">
       <HintPath>..\..\packages\MvcExtensions.2.0.0.0\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
@@ -49,6 +50,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\AccountController.cs" />
+    <Compile Include="Account\Forms\ChangePassword.cs" />
+    <Compile Include="Account\Forms\Handlers\ChangePasswordHandler.cs" />
+    <Compile Include="FormHandlerBase.cs" />
+    <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
+    <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />
+    <Compile Include="Account\Forms\Handlers\SignUpHandler.cs" />
+    <Compile Include="Account\Forms\SignOut.cs" />
+    <Compile Include="Account\Forms\SignIn.cs" />
+    <Compile Include="Account\Forms\Metadata\ChangePasswordMetadata.cs" />
+    <Compile Include="Account\Forms\Metadata\SignInMetadata.cs" />
+    <Compile Include="Account\Forms\Metadata\SignUpMetadata.cs" />
+    <Compile Include="Account\Forms\SignUp.cs" />
+    <Compile Include="Account\Criteria\FindByLogin.cs" />
+    <Compile Include="Account\Criteria\FindByLoginOrEmail.cs" />
+    <Compile Include="Account\Services\IAuthenticationService.cs" />
+    <Compile Include="Account\Services\Impl\AccountEntry.cs" />
+    <Compile Include="Account\Services\Impl\CustomAutentificationModule.cs" />
+    <Compile Include="Account\Services\Impl\CustomIdentity.cs" />
+    <Compile Include="Account\Services\Impl\FormsAuthenticationService.cs" />
+    <Compile Include="Account\Services\Impl\RoleType.cs" />
+    <Compile Include="CustomAuthorizeAttribute.cs" />
     <Compile Include="Events\EventsController.cs" />
     <Compile Include="Events\NewEventFormHandler.cs" />
     <Compile Include="Events\NewEventForm.cs" />

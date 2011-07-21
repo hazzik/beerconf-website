@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<Project ToolsVersion="4.0" DefaultTargets="Full" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="Full" DependsOnTargets="">
-    <Error Text="Hello"></Error>
-  </Target>
-</Project>

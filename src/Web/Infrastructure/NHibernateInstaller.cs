@@ -7,7 +7,7 @@ namespace BeerConf.Web.Infrastructure
     using Castle.MicroKernel.SubSystems.Configuration;
     using Castle.Windsor;
     using NHibernate;
-    using NHibernateConfigurator = Domain.NHibernate.NHibernateConfigurator;
+    using NHibernateConfigurator = BeerConf.Infrastructure.NHibernate.NHibernateConfigurator;
 
     public class NHibernateInstaller : IWindsorInstaller
     {
@@ -17,6 +17,7 @@ namespace BeerConf.Web.Infrastructure
         {
             container.Register(Component.For(typeof (IRepository<>)).ImplementedBy(typeof (NHibernateRepository<>)),
                                Component.For<INHibernateConfigurator>().ImplementedBy<NHibernateConfigurator>(),
+                               Component.For<ILinqProvider>().ImplementedBy<NHibernateLinqProvider>(),
                                Component.For<ISessionProvider>().ImplementedBy<DefaultSessionProvider>().LifeStyle.PerWebRequest);
 
             container.Register(Component.For<ISessionFactory>()

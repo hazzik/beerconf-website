@@ -1,6 +1,6 @@
-﻿namespace Domain.NHibernate.Tests
+﻿namespace BeerConf.Infrastructure.NHibernate.Tests
 {
-    using BeerConf.Domain.NHibernate;
+    using NHibernate;
     using Xunit;
     using global::NHibernate.Cfg;
     using global::NHibernate.Tool.hbm2ddl;

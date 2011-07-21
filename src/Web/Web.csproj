@@ -101,7 +101,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\FormsInstaller.cs" />
+    <Compile Include="Infrastructure\AccountInstaller.cs" />
+    <Compile Include="Infrastructure\FormsAndQueryInstaller.cs" />
     <Compile Include="Infrastructure\NHibernateInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -240,14 +241,18 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Events\New.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\SignIn.cshtml" />
+    <Content Include="Views\Account\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain.NHibernate\Domain.NHibernate.csproj">
+    <ProjectReference Include="..\Infrastructure.NHibernate\Infrastructure.NHibernate.csproj">
       <Project>{309CA85F-743C-4ECF-B21D-7C497556EE9E}</Project>
-      <Name>Domain.NHibernate</Name>
+      <Name>Infrastructure.NHibernate</Name>
     </ProjectReference>
     <ProjectReference Include="..\Migrations\Migrations.csproj">
       <Project>{F5C18651-CA55-4E7D-9981-6B5158F6BAB5}</Project>

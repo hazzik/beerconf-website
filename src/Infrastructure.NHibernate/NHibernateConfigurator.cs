@@ -1,9 +1,10 @@
-﻿namespace BeerConf.Domain.NHibernate
+﻿namespace BeerConf.Infrastructure.NHibernate
 {
     using System;
     using Brandy.Core;
     using Brandy.NHibernate;
-    using Entities;
+    using Brandy.NHibernate.Conventions;
+    using Domain.Entities;
     using FluentNHibernate;
     using FluentNHibernate.Automapping;
     using FluentNHibernate.Cfg;
@@ -30,8 +31,7 @@
                                                       .Conventions.AddFromAssemblyOf<NHibernateConfigurator>()
                                                       .UseOverridesFromAssemblyOf<NHibernateConfigurator>()
                                    ))
-                .ExposeConfiguration(c => c.SetProperty("generate_statistics", "true")
-                                              .SetProperty("adonet.batch_size", "100"))
+                .ExposeConfiguration(c => c.SetProperty("generate_statistics", "true"))
                 .CurrentSessionContext("managed_web")
                 .Database(db)
                 .BuildConfiguration();
@@ -43,6 +43,16 @@
 
         private class StoreConfiguration : DefaultAutomappingConfiguration
         {
+            public override string GetComponentColumnPrefix(Member member)
+            {
+                return string.Format("{0}_", NameConventions.GetTableName(member.PropertyType));
+            }
+
+            public override bool IsComponent(Type type)
+            {
+                return typeof (Password) == type || base.IsComponent(type);
+            }
+
             public override bool ShouldMap(Type type)
             {
                 return typeof (IEntity).IsAssignableFrom(type);

@@ -1,12 +1,13 @@
 namespace BeerConf.Web.Infrastructure
 {
+    using Brandy.Core;
     using Brandy.Web.Forms;
     using Castle.Facilities.TypedFactory;
     using Castle.MicroKernel.Registration;
     using Castle.MicroKernel.SubSystems.Configuration;
     using Castle.Windsor;
 
-    public class FormsInstaller : IWindsorInstaller
+    public class FormsAndQueryInstaller : IWindsorInstaller
     {
         #region IWindsorInstaller Members
 
@@ -21,6 +22,16 @@ namespace BeerConf.Web.Infrastructure
 
             container.Register(formHandlers,
                                Component.For<IFormHandlerFactory>().AsFactory());
+
+            BasedOnDescriptor queries = AllTypes.FromAssemblyNamed("BeerConf.Infrastructure.NHibernate")
+                .BasedOn(typeof (IQuery<,>))
+                .WithService.AllInterfaces()
+                .Configure(x => x.LifeStyle.Transient);
+
+            container.Register(queries,
+                               Component.For(typeof (IQueryBuilderWithPart<>)).ImplementedBy(typeof (QueryBuilderWithPart<>)),
+                               Component.For<IQueryBuilder>().AsFactory(),
+                               Component.For<IQueryFactory>().AsFactory());
         }
 
         #endregion

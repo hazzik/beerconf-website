@@ -55,6 +55,8 @@
     <Compile Include="Migration201107201117.cs" />
     <Compile Include="Migration201107210028.cs" />
     <Compile Include="MigrationsRunner.cs" />
+    <Compile Include="Migration201107211436.cs" />
+    <Compile Include="Migration201107211508.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

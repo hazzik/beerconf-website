@@ -10,7 +10,7 @@
     {
     	public MvcApplication()
     	{
-    		Bootstrapper.BootstrapperTasks
+       		Bootstrapper.BootstrapperTasks
     			.Include<RegisterModelMetadata>()
     			.Include<RegisterControllers>() /*
                          .Include<ConfigureFilterAttributes>()
