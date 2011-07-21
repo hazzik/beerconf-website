@@ -10,7 +10,7 @@ namespace BeerConf.Web.Infrastructure
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IAuthenticationService>().ImplementedBy<FormsAuthenticationService>());
+            container.Register(Component.For<IAuthenticationService>().ImplementedBy<FormsAuthenticationService>().LifeStyle.Transient);
         }
     }
 }

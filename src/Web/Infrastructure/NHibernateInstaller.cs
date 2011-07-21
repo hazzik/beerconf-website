@@ -15,9 +15,9 @@ namespace BeerConf.Web.Infrastructure
 
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For(typeof (IRepository<>)).ImplementedBy(typeof (NHibernateRepository<>)),
+            container.Register(Component.For(typeof (IRepository<>)).ImplementedBy(typeof (NHibernateRepository<>)).LifeStyle.Transient,
                                Component.For<INHibernateConfigurator>().ImplementedBy<NHibernateConfigurator>(),
-                               Component.For<ILinqProvider>().ImplementedBy<NHibernateLinqProvider>(),
+                               Component.For<ILinqProvider>().ImplementedBy<NHibernateLinqProvider>().LifeStyle.Transient,
                                Component.For<ISessionProvider>().ImplementedBy<DefaultSessionProvider>().LifeStyle.PerWebRequest);
 
             container.Register(Component.For<ISessionFactory>()

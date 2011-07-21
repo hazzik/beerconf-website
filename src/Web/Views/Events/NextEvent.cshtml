@@ -1,0 +1,6 @@
+﻿@using BeerConf.Web.Application.Events
+@model NextEventViewModel
+
+@if (Model != null) {
+    @:Следующая встреча "<a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Name</a>" состоится <a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Begin.ToLongDateString() в @Model.Begin.ToShortTimeString()</a>
+}

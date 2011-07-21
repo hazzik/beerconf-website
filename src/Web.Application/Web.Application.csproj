@@ -53,6 +53,8 @@
     <Compile Include="Account\AccountController.cs" />
     <Compile Include="Account\Forms\ChangePassword.cs" />
     <Compile Include="Account\Forms\Handlers\ChangePasswordHandler.cs" />
+    <Compile Include="Events\NextEvent.cs" />
+    <Compile Include="Events\NextEventViewModel.cs" />
     <Compile Include="FormHandlerBase.cs" />
     <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
     <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />

@@ -1,0 +1,30 @@
+namespace BeerConf.Infrastructure.NHibernate.Queries.Events
+{
+    using System;
+    using System.Linq;
+    using Brandy.Core;
+    using Brandy.NHibernate;
+    using Domain.Entities;
+    using Web.Application.Events;
+
+    public class NextEventQuery : NHibernateLinqQueryBase<NextEventViewModel, NextEvent>
+    {
+        public NextEventQuery(ILinqProvider linqProvider) : base(linqProvider)
+        {
+        }
+
+        public override NextEventViewModel Ask(NextEvent criterion)
+        {
+            return Query<Event>()
+                .Where(x => x.Begin >= DateTime.Today)
+                .OrderBy(x => x.Begin)
+                .Select(x => new NextEventViewModel
+                                 {
+                                     Id = x.Id,
+                                     Begin = x.Begin,
+                                     Name = x.Name
+                                 })
+                .FirstOrDefault();
+        }
+    }
+}

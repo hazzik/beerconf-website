@@ -67,6 +67,7 @@
     <Compile Include="Overrides\UserOverride.cs" />
     <Compile Include="Queries\Account\FindByLoginOrEmailQuery.cs" />
     <Compile Include="Queries\Account\FindByLoginQuery.cs" />
+    <Compile Include="Queries\Events\NextEventQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

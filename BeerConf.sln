@@ -18,9 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "src\Migrations\Migrations.csproj", "{F5C18651-CA55-4E7D-9981-6B5158F6BAB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CBD3BDF8-FFEA-488F-9D69-817C949038B3}"
-	ProjectSection(SolutionItems) = preProject
-		BeerConf.proj = BeerConf.proj
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
