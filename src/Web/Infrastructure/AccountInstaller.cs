@@ -1,5 +1,6 @@
 namespace BeerConf.Web.Infrastructure
 {
+    using Application.Account.Forms.Handlers;
     using Application.Account.Services;
     using Application.Account.Services.Impl;
     using Castle.MicroKernel.Registration;
@@ -10,7 +11,8 @@ namespace BeerConf.Web.Infrastructure
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IAuthenticationService>().ImplementedBy<FormsAuthenticationService>().LifeStyle.Transient);
+            container.Register(Component.For<IAuthenticationService>().ImplementedBy<FormsAuthenticationService>().LifeStyle.Transient,
+                               Component.For<IContextUserProvider>().ImplementedBy<ContextUserProvider>().LifeStyle.Transient);
         }
     }
 }

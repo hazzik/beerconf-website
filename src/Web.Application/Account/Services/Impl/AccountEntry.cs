@@ -20,7 +20,7 @@
             RoleType = account.IsAdmin ? RoleType.Admin : RoleType.None;
         }
 
-        protected string Name { get; set; }
+        public string Name { get; set; }
 
         public int Id { get; set; }
 

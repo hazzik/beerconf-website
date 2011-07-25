@@ -11,8 +11,6 @@
     /// </summary>
     public sealed class CustomAutentificationModule : IHttpModule
     {
-        #region IHttpModule Members
-
         public void Init(HttpApplication httpApplication)
         {
             httpApplication.AuthenticateRequest += OnAuthenticateRequest;
@@ -22,20 +20,18 @@
         {
         }
 
-        #endregion
-
         private static void OnAuthenticateRequest(object sender, EventArgs e)
         {
-            var httpApplication = (HttpApplication) sender;
+            var application = (HttpApplication) sender;
 
-            HttpContext context = HttpContext.Current;
+            var context = application.Context;
 
             if (context.User != null && context.User.Identity.IsAuthenticated)
                 return;
 
             string cookieName = FormsAuthentication.FormsCookieName;
 
-            HttpCookie cookie = httpApplication.Request.Cookies[cookieName.ToUpper()];
+            HttpCookie cookie = application.Request.Cookies[cookieName.ToUpper()];
 
             if (cookie == null)
                 return;
@@ -44,7 +40,7 @@
                 FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
                 var identity = new CustomIdentity(AccountEntry.Deserialize(ticket.UserData), ticket.Name);
                 var principal = new GenericPrincipal(identity, identity.GetRoles());
-                httpApplication.Context.User = principal;
+                context.User = principal;
                 Thread.CurrentPrincipal = principal;
             }
             catch
