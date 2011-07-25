@@ -1,45 +1,95 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
 body {
-  font-size: 75%;
-  font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
-  color: #232323;
-  background-color: #fff;
+  background-color: #EEE8DD;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.2em;
+  background: #FFFDDF;
+  color: #3D2B1F;
 }
-/* Styles for basic forms
------------------------------------------------------------*/
-fieldset {
-  border: 1px solid #ddd;
-  padding: 0 1.4em 1.4em 1.4em;
-  margin: 0 0 1.5em 0;
+#head {
+  width: 1000px;
+  height: 50px;
+  background: white;
+  margin: 0 auto;
+  padding: 7px;
+  border-bottom: 2px solid #3D2B1F;
 }
-legend {
-  font-size: 1.2em;
-  font-weight: bold;
+#title {
+  font-family: Georgia,Times New Roman,serif;
+  font-style: italic;
+  font-size: 3.0em;
+  font-weight: normal;
+  line-height: 1;
+  font-variant: small-caps;
+  float: left;
+  margin-left: 7px;
 }
-textarea {
-  min-height: 75px;
+#main {
+  margin: 0 auto;
+  width: 1000px;
+  background: white;
+  padding: 7px;
+  min-height: 500px;
 }
-.editor-label {
-  margin: 1em 0 0 0;
+#left-column {
+  width: 200px;
+  float: left;
 }
-.editor-field {
-  margin: 0.5em 0 0 0;
+#center-column {
+  width: 600px;
+  float: left;
+  float: left;
 }
-/* Styles for validation helpers
------------------------------------------------------------*/
-.field-validation-error {
-  color: #ff0000;
+#right-column {
+  width: 200px;
+  float: left;
+  float: left;
 }
-.field-validation-valid {
-  display: none;
+#footer {
+  clear: both;
+  margin: 0 auto;
+  width: 1000px;
+  text-align: center;
+  padding-bottom: 20px;
+  background: white;
+  padding: 7px;
 }
-.input-validation-error {
-  border: 1px solid #ff0000;
-  background-color: #ffeeee;
+#content {
+  padding: 5px 9px;
 }
-.validation-summary-errors {
-  font-weight: bold;
-  color: #ff0000;
+#main-menu ul {
+  letter-spacing: .09em;
 }
-.validation-summary-valid {
-  display: none;
+#main-menu ul li {
+  padding: 5px;
+  margin: 5px;
+  background: #a25f2a;
+}
+#main-menu ul li a, #main-menu ul li span {
+  text-decoration: none;
+  color: #ffcc00;
+}
+#main-menu ul li a:hover, #main-menu ul li span {
+  opacity: 0.8;
+}
+#bottom-menu ul li {
+  display: inline;
+}
+#bottom-menu ul li:after, #bottom-menu ul li:first-child:before {
+  content: "|";
+}
+ul.list {
+  padding-left: 40px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+ul.list li {
+  list-style: disc;
+}
+.clear {
+  clear: both;
 }

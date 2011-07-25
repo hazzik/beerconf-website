@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/reset.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/themes/base/jquery.ui.all.min.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jquery-ui-1.8.14.min.js")" type="text/javascript"></script>
@@ -10,7 +11,22 @@
 </head>
 
 <body>
-    <div>@User.Identity.Name</div>
-    @RenderBody()
+    <div id="head">
+        <div id="title">beerconf.ru</div>
+    </div>
+    <div id="main">
+        <div id="left-column">
+            <div id="main-menu">@Html.Partial("_Navigation")</div>
+        </div>
+        <div id="center-column">
+            <div id="content">@RenderBody()</div>
+        </div>
+        <div id="right-column">@Html.Action("NextEvent", "Events")</div>
+        <br class="clear"/>
+    </div>
+    <div id="footer">
+        <div id="bottom-menu">@Html.Partial("_Navigation")</div>
+        <div id="copyright">&copy; beerconf 2011</div>
+    </div>
 </body>
 </html>

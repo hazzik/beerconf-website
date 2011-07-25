@@ -1,12 +1,18 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
-</head>
-
-<body>
-    @RenderBody()
-</body>
-</html>
+﻿@helper MenuItem(string actionName, string controllerName, string title)
+{
+    var values = ViewContext.RouteData.Values;
+    var current = (string) values["action"] == actionName && (string) values["controller"] == controllerName;
+    if(current)
+    {
+        <span>@title</span>
+    }
+    else
+    {
+        <a href="@Url.Action(actionName, controllerName)">@title</a>
+    }
+}
+<ul>
+    <li>@MenuItem("Index", "Home", "Главная")</li>
+    <li>@MenuItem("About", "Home", "О мероприятии")</li>
+    <li>@MenuItem("Contacts", "Home", "Контакты")</li>
+</ul>
