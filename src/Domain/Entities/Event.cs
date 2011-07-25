@@ -25,7 +25,7 @@
 
         #endregion
 
-        public public virtual void AddParticipant(User user)
+        public virtual void AddParticipant(User user)
         {
             participants.Add(user);
         }
