@@ -6,7 +6,7 @@
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Security;
-    using BeerConf.Web.Application.Account.Services.Impl;
+    using Account.Services.Impl;
 
     public class CustomAuthorizeAttribute : AuthorizeAttribute
 	{

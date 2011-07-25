@@ -59,7 +59,6 @@
     <Compile Include="Events\Forms\Participate.cs" />
     <Compile Include="Events\Forms\Handlers\ParticipateHandler.cs" />
     <Compile Include="Events\ViewModels\NextEventViewModel.cs" />
-    <Compile Include="FormHandlerBase.cs" />
     <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
     <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />
     <Compile Include="Account\Forms\Handlers\SignUpHandler.cs" />

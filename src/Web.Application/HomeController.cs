@@ -8,9 +8,5 @@
         {
             return View();
         }
-        public ActionResult Registration()
-        {
-            return View();
-        }
     }
 }

@@ -2,24 +2,29 @@
 {
     using System;
     using Brandy.Core;
+    using Brandy.Web.Forms;
     using Criteria;
     using Domain.Entities;
     using Services;
 
-    public class SignUpHandler : FormHandlerBase<SignUp>
+    public class SignUpHandler : IFormHandler<SignUp>
     {
+        private readonly IQueryBuilder query;
         private readonly IAuthenticationService service;
         private readonly IRepository<User> userRepository;
 
-        public SignUpHandler(IAuthenticationService service, IRepository<User> userRepository)
+        public SignUpHandler(IAuthenticationService service, IRepository<User> userRepository, IQueryBuilder query)
         {
             this.service = service;
             this.userRepository = userRepository;
+            this.query = query;
         }
 
-        public override void Handle(SignUp command)
+        #region IFormHandler<SignUp> Members
+
+        public virtual void Handle(SignUp command)
         {
-            IQueryBuilderWithPart<User> part = Query.For<User>();
+            IQueryBuilderWithPart<User> part = query.For<User>();
             User rowCount = part.With(new FindByLoginOrEmail {LoginOrEmail = command.Login}) ??
                             part.With(new FindByLoginOrEmail {LoginOrEmail = command.Email});
 
@@ -33,5 +38,7 @@
 
             service.SignIn(user, false);
         }
+
+        #endregion
     }
 }

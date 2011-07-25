@@ -1,9 +1,11 @@
 namespace BeerConf.Web.Application.Account.Forms.Handlers
 {
     using System;
+    using Brandy.Web.Forms;
+    using Domain.Entities;
     using Services;
 
-    public class ChangePasswordHandler : FormHandlerBase<ChangePassword>
+    public class ChangePasswordHandler : IFormHandler<ChangePassword>
     {
         private readonly IContextUserProvider contextUserProvider;
 
@@ -12,14 +14,18 @@ namespace BeerConf.Web.Application.Account.Forms.Handlers
             this.contextUserProvider = contextUserProvider;
         }
 
-        public override void Handle(ChangePassword command)
+        #region IFormHandler<ChangePassword> Members
+
+        public virtual void Handle(ChangePassword command)
         {
-            var user = contextUserProvider.ContextUser();
+            User user = contextUserProvider.ContextUser();
 
             if (user == null || !(user.Password.Check(command.OldPassword)))
                 throw new ApplicationException("Неправильно указан текущий пароль");
 
             user.SetPassword(command.NewPassword);
         }
+
+        #endregion
     }
 }

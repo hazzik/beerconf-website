@@ -1,8 +1,9 @@
 namespace BeerConf.Web.Application.Account.Forms.Handlers
 {
+    using Brandy.Web.Forms;
     using Services;
 
-    public class SignOutHandler : FormHandlerBase<SignOut>
+    public class SignOutHandler : IFormHandler<SignOut>
     {
         private readonly IAuthenticationService service;
 
@@ -11,7 +12,7 @@ namespace BeerConf.Web.Application.Account.Forms.Handlers
             this.service = service;
         }
 
-        public override void Handle(SignOut command)
+        public virtual void Handle(SignOut command)
         {
             service.SignOut();
         }
