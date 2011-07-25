@@ -1,21 +1,21 @@
-﻿namespace BeerConf.Web.Application.Events
+﻿namespace BeerConf.Web.Application.Events.Forms.Handlers
 {
     using Brandy.Core;
     using Brandy.Web.Forms;
     using Domain.Entities;
 
-    public class NewEventFormHandler : IFormHandler<NewEventForm>
+    public class NewEventHandler : IFormHandler<NewEvent>
     {
         private readonly IRepository<Event> eventRepository;
 
-        public NewEventFormHandler(IRepository<Event> eventRepository)
+        public NewEventHandler(IRepository<Event> eventRepository)
         {
             this.eventRepository = eventRepository;
         }
 
-        #region IFormHandler<NewEventForm> Members
+        #region IFormHandler<NewEvent> Members
 
-        public void Handle(NewEventForm form)
+        public void Handle(NewEvent form)
         {
             eventRepository.Add(new Event
                                     {

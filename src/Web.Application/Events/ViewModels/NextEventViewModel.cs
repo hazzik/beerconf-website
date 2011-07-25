@@ -1,4 +1,4 @@
-namespace BeerConf.Web.Application.Events
+namespace BeerConf.Web.Application.Events.ViewModels
 {
     using System;
 

@@ -3,11 +3,13 @@
     using System.Web.Mvc;
     using Brandy.Core;
     using Brandy.Web.Forms;
-    using Domain.Entities;
+    using Criteria;
+    using Forms;
+    using ViewModels;
 
     public class EventsController : FormControllerBase
     {
-        private IQueryBuilder query;
+        private readonly IQueryBuilder query;
 
         public EventsController(IQueryBuilder query)
         {
@@ -17,7 +19,7 @@
         [ChildActionOnly]
         public ActionResult NextEvent()
         {
-            var model = query.For<NextEventViewModel>()
+            NextEventViewModel model = query.For<NextEventViewModel>()
                 .With(new NextEvent());
 
             return PartialView(model);
@@ -25,13 +27,19 @@
 
         public ActionResult New()
         {
-            return View(new NewEventForm());
+            return View(new NewEvent());
         }
 
         [HttpPost]
-        public ActionResult New(NewEventForm form)
+        public ActionResult New(NewEvent form)
         {
             return Handle(form, RedirectToAction("New"));
+        }
+
+        [HttpPost]
+        public ActionResult Participate(Participate form)
+        {
+            return Handle(form, RedirectToAction("Index", "Home"));
         }
     }
 }

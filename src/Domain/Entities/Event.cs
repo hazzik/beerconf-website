@@ -1,8 +1,8 @@
 ﻿namespace BeerConf.Domain.Entities
 {
-	using System;
-	using System.Collections.Generic;
-	using Brandy.Core;
+    using System;
+    using System.Collections.Generic;
+    using Brandy.Core;
 
     public class Event : IEntity
     {
@@ -24,5 +24,10 @@
         public virtual int Id { get; set; }
 
         #endregion
+
+        public public virtual void AddParticipant(User user)
+        {
+            participants.Add(user);
+        }
     }
 }

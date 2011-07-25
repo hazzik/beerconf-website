@@ -1,9 +1,9 @@
-﻿namespace BeerConf.Web.Application.Events
+﻿namespace BeerConf.Web.Application.Events.Forms
 {
     using System;
     using Brandy.Web.Forms;
 
-    public class NewEventForm : IForm
+    public class NewEvent : IForm
     {
         public DateTime Begin { get; set; }
         public DateTime End { get; set; }

@@ -5,7 +5,8 @@ namespace BeerConf.Infrastructure.NHibernate.Queries.Events
     using Brandy.Core;
     using Brandy.NHibernate;
     using Domain.Entities;
-    using Web.Application.Events;
+    using Web.Application.Events.Criteria;
+    using Web.Application.Events.ViewModels;
 
     public class NextEventQuery : NHibernateLinqQueryBase<NextEventViewModel, NextEvent>
     {

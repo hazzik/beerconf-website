@@ -55,8 +55,10 @@
     <Compile Include="Account\Forms\Handlers\ChangePasswordHandler.cs" />
     <Compile Include="Account\Services\Impl\ContextUserProvider.cs" />
     <Compile Include="Account\Services\IContextUserProvider.cs" />
-    <Compile Include="Events\NextEvent.cs" />
-    <Compile Include="Events\NextEventViewModel.cs" />
+    <Compile Include="Events\Criteria\NextEvent.cs" />
+    <Compile Include="Events\Forms\Participate.cs" />
+    <Compile Include="Events\Forms\Handlers\ParticipateHandler.cs" />
+    <Compile Include="Events\ViewModels\NextEventViewModel.cs" />
     <Compile Include="FormHandlerBase.cs" />
     <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
     <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />
@@ -77,8 +79,8 @@
     <Compile Include="Account\Services\Impl\RoleType.cs" />
     <Compile Include="CustomAuthorizeAttribute.cs" />
     <Compile Include="Events\EventsController.cs" />
-    <Compile Include="Events\NewEventFormHandler.cs" />
-    <Compile Include="Events\NewEventForm.cs" />
+    <Compile Include="Events\Forms\Handlers\NewEventHandler.cs" />
+    <Compile Include="Events\Forms\NewEvent.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="Metadata\DatePickerSettings.cs" />
     <Compile Include="Metadata\ModelMetadateExtensions.cs" />
