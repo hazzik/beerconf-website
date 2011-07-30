@@ -76,7 +76,7 @@ body {
             a:hover, span {
                 opacity: 0.8;
             }
-        } 
+} 
     }
 }
 #bottom-menu {
@@ -99,4 +99,24 @@ ul.list {
 }
 .clear {
     clear: both;
+}
+#log-on-information {
+    float: right;
+}
+#session {
+    &.active {
+        .dropdown {
+            display: block !important;
+        }    
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+        right: 0;
+        padding: 5px;
+        border: 1px solid #3D2B1F;
+        background: white;
+    }    
+    position: relative;
+    white-space: nowrap;
 }

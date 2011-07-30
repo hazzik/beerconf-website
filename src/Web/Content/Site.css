@@ -93,3 +93,21 @@ ul.list li {
 .clear {
   clear: both;
 }
+#log-on-information {
+  float: right;
+}
+#session {
+  position: relative;
+  white-space: nowrap;
+}
+#session.active .dropdown {
+  display: block !important;
+}
+#session .dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  border: 1px solid #3D2B1F;
+  background: white;
+}

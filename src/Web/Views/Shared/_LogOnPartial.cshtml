@@ -1,0 +1,49 @@
+﻿@using BeerConf.Web.Application.Account.Forms
+@model SignIn
+
+<div id="session">
+@if (Request.IsAuthenticated)
+{
+    <a class="link" href="#">
+        @User.Identity.Name
+    </a>
+    <div class="dropdown">
+        <ul>
+            <li><a href="@Url.Action("ChangePassword", "Account")">Изменить пароль</a></li>
+            <li><a href="@Url.Action("SignOut", "Account")">Выйти</a></li>
+        </ul>
+    </div>
+}
+else
+{
+    <a class="link" href="#">
+        Войти
+    </a>
+    <div class="dropdown">
+        <ul>
+            <li>
+            @using (Html.BeginForm("SignIn","Account")) {
+                <div>
+                    <fieldset>
+                        @Html.EditorForModel()
+                        <p>
+                            @*<input type="hidden" name="returnUrl" value="@Request.Url"/>*@
+                            <input type="submit" value="Войти" />
+                        </p>
+                    </fieldset>
+                </div>
+            }
+            </li>
+            <li><a href="@Url.Action("SignUp","Account")">Зарегистрироваться</a></li>
+        </ul>
+    </div>
+}
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#session .link').click(function () {
+            $('#session').toggleClass('active');
+            return false;
+        });
+    });
+</script>

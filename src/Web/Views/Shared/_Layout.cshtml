@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using BeerConf.Web.Application.Account.Forms
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
@@ -13,6 +15,7 @@
 <body>
     <div id="head">
         <div id="title">beerconf.ru</div>
+        <div id="log-on-information">@Html.Partial("_LogOnPartial", new SignIn())</div>
     </div>
     <div id="main">
         <div id="left-column">
