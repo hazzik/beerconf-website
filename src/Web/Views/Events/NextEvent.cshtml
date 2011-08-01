@@ -1,7 +1,21 @@
-﻿@using BeerConf.Web.Application.Events
-@using BeerConf.Web.Application.Events.ViewModels
+﻿@using BeerConf.Web.Application.Events.ViewModels
 @model NextEventViewModel
 
-@if (Model != null) {
-    @:Следующая встреча "<a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Name</a>" состоится <a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Begin.ToLongDateString() в @Model.Begin.ToShortTimeString()</a>
-}
+<div id="next-event">
+    @if (Model != null) {
+        @:Следующая встреча "<a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Name</a>" состоится <a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Begin.ToLongDateString() в @Model.Begin.ToShortTimeString()</a>
+
+        if(Model.IsParticipating == false)
+        {
+            using (Html.BeginForm("Participate", "Events"))
+            {
+                <input value="@Model.Id" name="EventId" type="hidden"/>
+                <input value="Я хочу участвовать!" type="submit"/>
+            }
+        }
+        else
+        {
+            <div>Вы участвуете!</div>
+        }
+    }
+</div>

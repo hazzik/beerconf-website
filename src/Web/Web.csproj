@@ -220,6 +220,7 @@
     <Content Include="Scripts\jquery-1.6.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.14.js" />
     <Content Include="Scripts\jquery-ui-1.8.14.min.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-ru.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -253,6 +254,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTimePicker.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

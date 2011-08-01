@@ -2,7 +2,6 @@ namespace BeerConf.Infrastructure.NHibernate.Queries.Events
 {
     using System;
     using System.Linq;
-    using Brandy.Core;
     using Brandy.NHibernate;
     using Domain.Entities;
     using Web.Application.Events.Criteria;
@@ -23,7 +22,8 @@ namespace BeerConf.Infrastructure.NHibernate.Queries.Events
                                  {
                                      Id = x.Id,
                                      Begin = x.Begin,
-                                     Name = x.Name
+                                     Name = x.Name,
+                                     IsParticipating = criterion.User != null && x.Participants.Contains(criterion.User)
                                  })
                 .FirstOrDefault();
         }

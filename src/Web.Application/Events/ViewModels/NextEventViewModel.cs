@@ -9,5 +9,7 @@ namespace BeerConf.Web.Application.Events.ViewModels
         public DateTime Begin { get; set; }
 
         public string Name { get; set; }
+
+        public bool IsParticipating { get; set; }
     }
 }

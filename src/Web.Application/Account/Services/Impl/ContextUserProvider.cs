@@ -16,15 +16,19 @@ namespace BeerConf.Web.Application.Account.Services.Impl
 
         public User ContextUser()
         {
-            return userRepository.Get(Identity().Id);
+            return ContextUser(true);
         }
 
-        private static CustomIdentity Identity()
+        public User ContextUser(bool shouldThrow)
         {
             var identity = HttpContext.Current.User.Identity as CustomIdentity;
             if (identity == null)
-                throw new NotSupportedException();
-            return identity;
+            {
+                if (shouldThrow)
+                    throw new NotSupportedException();
+                return null;
+            }
+            return userRepository.Get(identity.Id);
         }
     }
 }
