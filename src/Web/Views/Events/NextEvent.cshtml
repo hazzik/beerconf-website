@@ -7,10 +7,17 @@
 
         if(Model.IsParticipating == false)
         {
-            using (Html.BeginForm("Participate", "Events"))
+            if(Request.IsAuthenticated)
             {
-                <input value="@Model.Id" name="EventId" type="hidden"/>
-                <input value="Я хочу участвовать!" type="submit"/>
+                using (Html.BeginForm("Participate", "Events"))
+                {
+                    <input value="@Model.Id" name="EventId" type="hidden"/>
+                    <input value="Я хочу участвовать!" type="submit"/>
+                }
+            }
+            else
+            {
+                <div><a href="@Url.Action("SignIn", "Account")"><input type="button" value="Я хочу участвовать!"/></a></div>
             }
         }
         else
