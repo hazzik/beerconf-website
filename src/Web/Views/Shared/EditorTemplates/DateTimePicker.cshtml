@@ -1,12 +1,10 @@
-﻿@using BeerConf.Web.Application.Metadata
-@using Brandy.Web
+﻿@using Brandy.Web
 @model DateTime?
 
 @Html.RequireScript(
     Url.Content("~/Scripts/jquery-1.6.2.min.js"),
     Url.Content("~/Scripts/jquery-ui-1.8.14.min.js"),
     Url.Content("~/Scripts/jquery.ui.datepicker-ru.js"),
-    Url.Content("~/Scripts/MvcExtensions.js"))
+    Url.Content("~/Scripts/BeerConf.js"))
 
-@{var settings = ViewData.ModelMetadata.GetAdditionalSettingOrCreateNew<DatePickerSettings>();}
-@Html.TextBoxFor(_ => _, settings.ToHtmlAttributes())
+@Html.TextBoxFor(_ => _, new { role = "datetimepicker", data_min_date = DateTime.Today.ToShortDateString() })

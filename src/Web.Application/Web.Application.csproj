@@ -56,9 +56,11 @@
     <Compile Include="Account\Services\Impl\ContextUserProvider.cs" />
     <Compile Include="Account\Services\IContextUserProvider.cs" />
     <Compile Include="Events\Criteria\NextEvent.cs" />
+    <Compile Include="Events\ViewModels\EventDetailsViewModel.cs" />
     <Compile Include="Events\Forms\Metadata\NewEventMetadata.cs" />
     <Compile Include="Events\Forms\Participate.cs" />
     <Compile Include="Events\Forms\Handlers\ParticipateHandler.cs" />
+    <Compile Include="Events\ViewModels\Metadata\EventDetailsViewModelMetadata.cs" />
     <Compile Include="Events\ViewModels\NextEventViewModel.cs" />
     <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
     <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />

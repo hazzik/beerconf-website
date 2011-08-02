@@ -216,6 +216,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <None Include="Content\Site.less" />
+    <Content Include="Scripts\BeerConf.min.js">
+      <DependentUpon>BeerConf.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.14.js" />
@@ -224,7 +227,7 @@
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\MvcExtensions.js" />
+    <Content Include="Scripts\BeerConf.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -255,6 +258,7 @@
     <Content Include="Views\Home\Contacts.cshtml" />
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTimePicker.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

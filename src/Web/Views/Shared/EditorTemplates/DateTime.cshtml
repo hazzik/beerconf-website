@@ -2,7 +2,7 @@
 @using Brandy.Web
 @model DateTime?
 
-@Html.RequireScript(Url.Content("~/Scripts/MvcExtensions.js"))
+@Html.RequireScript(Url.Content("~/Scripts/BeerConf.js"))
 
 @{var settings = ViewData.ModelMetadata.GetAdditionalSettingOrCreateNew<DatePickerSettings>();}
 @Html.TextBoxFor(_ => _, settings.ToHtmlAttributes())

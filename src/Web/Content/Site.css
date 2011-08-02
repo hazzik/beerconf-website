@@ -111,3 +111,11 @@ ul.list li {
   border: 1px solid #3D2B1F;
   background: white;
 }
+.display-label {
+  float: left;
+  padding: 5px;
+  font-weight: bolder;
+}
+.display-field {
+  padding: 5px;
+}

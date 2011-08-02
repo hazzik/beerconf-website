@@ -21,3 +21,5 @@ ul.list li{list-style:disc}
 #session{position:relative;white-space:nowrap}
 #session.active .dropdown{display:block!important}
 #session .dropdown{display:none;position:absolute;right:0;padding:5px;border:1px solid #3D2B1F;background:white}
+.display-label{float:left;padding:5px;font-weight:bolder}
+.display-field{padding:5px}
