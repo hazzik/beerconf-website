@@ -215,7 +215,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
-    <None Include="Content\Site.less" />
+    <Content Include="Content\Site.less" />
     <Content Include="Scripts\BeerConf.min.js">
       <DependentUpon>BeerConf.js</DependentUpon>
     </Content>
