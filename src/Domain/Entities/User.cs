@@ -10,7 +10,7 @@ namespace BeerConf.Domain.Entities
 
         public virtual string EMail { get; set; }
 
-        public virtual Password Password { get; private set; }
+        public virtual Password Password { get; protected set; }
 
         public virtual bool IsAdmin { get; set; }
 

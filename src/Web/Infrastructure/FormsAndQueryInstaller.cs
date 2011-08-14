@@ -29,7 +29,7 @@ namespace BeerConf.Web.Infrastructure
                 .Configure(x => x.LifeStyle.Transient);
 
             container.Register(queries,
-                               Component.For(typeof(IQueryBuilderWithPart<>)).ImplementedBy(typeof(QueryBuilderWithPart<>)).LifeStyle.Transient,
+                               Component.For(typeof (IQueryBuilderWithPart<>)).ImplementedBy(typeof (QueryBuilderWithPart<>)).LifeStyle.Transient,
                                Component.For<IQueryBuilder>().AsFactory(),
                                Component.For<IQueryFactory>().AsFactory());
         }

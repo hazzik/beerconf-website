@@ -1,5 +1,6 @@
 namespace BeerConf.Web.Infrastructure
 {
+    using BeerConf.Infrastructure.NHibernate;
     using Brandy.Core;
     using Brandy.NHibernate;
     using Castle.Core;
@@ -7,7 +8,6 @@ namespace BeerConf.Web.Infrastructure
     using Castle.MicroKernel.SubSystems.Configuration;
     using Castle.Windsor;
     using NHibernate;
-    using NHibernateConfigurator = BeerConf.Infrastructure.NHibernate.NHibernateConfigurator;
 
     public class NHibernateInstaller : IWindsorInstaller
     {
