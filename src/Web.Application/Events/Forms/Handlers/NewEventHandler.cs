@@ -24,6 +24,7 @@
                                         Description = form.Description,
                                         Name = form.Name,
                                         Place = form.Place,
+                                        MaxPlaces = form.MaxPlaces
                                     });
         }
 

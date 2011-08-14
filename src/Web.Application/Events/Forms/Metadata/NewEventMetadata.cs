@@ -24,6 +24,9 @@
             Configure(x => x.Place)
                 .DisplayName("Место проведения");
 
+            Configure(x => x.MaxPlaces)
+                .DisplayName("Количество мест");
+
             Configure(x => x.Description)
                 .DisplayName("Описание")
                 .AsMultilineText();

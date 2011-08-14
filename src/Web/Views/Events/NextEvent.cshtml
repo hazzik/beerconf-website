@@ -2,12 +2,17 @@
 @model NextEventViewModel
 
 <div id="next-event">
-    @if (Model != null) {
-        @:Следующая встреча "<a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Name</a>" состоится <a href="@Url.Action("Details", "Events", new { id = Model.Id })">@Model.Begin.ToLongDateString() в @Model.Begin.ToShortTimeString()</a>
+    @if (Model != null)
+    {
+        @:Следующая встреча "<a href="@Url.Action("Details", "Events", new {id = Model.Id})">@Model.Name</a>" состоится <a href="@Url.Action("Details", "Events", new {id = Model.Id})">@Model.Begin.ToLongDateString() в @Model.Begin.ToShortTimeString()</a>
 
-        if(Model.IsParticipating == false)
+        if (Model.IsParticipating == false)
         {
-            if(Request.IsAuthenticated)
+            if (Model.PlacesCount <= 0)
+            {
+                <div>Извините, мест больше нет:(</div>
+            }
+            else if (Request.IsAuthenticated)
             {
                 using (Html.BeginForm("Participate", "Events"))
                 {

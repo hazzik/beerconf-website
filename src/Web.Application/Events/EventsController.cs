@@ -1,6 +1,7 @@
 ﻿namespace BeerConf.Web.Application.Events
 {
     using System;
+    using System.Linq;
     using System.Web.Mvc;
     using Account.Services;
     using Account.Services.Impl;
@@ -58,7 +59,8 @@
                            Begin = @event.Begin,
                            End = @event.End,
                            Description = @event.Description,
-                           Place = @event.Place
+                           Place = @event.Place,
+                           PlacesCount = @event.MaxPlaces - @event.Participants.Count()
                        };
         }
 

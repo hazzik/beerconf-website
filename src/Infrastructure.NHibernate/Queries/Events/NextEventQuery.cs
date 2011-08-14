@@ -23,7 +23,8 @@ namespace BeerConf.Infrastructure.NHibernate.Queries.Events
                                      Id = x.Id,
                                      Begin = x.Begin,
                                      Name = x.Name,
-                                     IsParticipating = criterion.User != null && x.Participants.Contains(criterion.User)
+                                     IsParticipating = criterion.User != null && x.Participants.Contains(criterion.User),
+                                     PlacesCount = x.MaxPlaces - x.Participants.Count()
                                  })
                 .FirstOrDefault();
         }

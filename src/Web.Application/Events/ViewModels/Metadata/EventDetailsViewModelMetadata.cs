@@ -20,6 +20,10 @@
             Configure(x => x.Place)
                 .DisplayName("Место проведения");
 
+            Configure(x => x.PlacesCount)
+                .DisplayName("Мест осталось")
+                .NullDisplayText("Не ограничено");
+
             Configure(x => x.Description)
                 .DisplayName("Описание");
         }

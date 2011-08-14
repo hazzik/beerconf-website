@@ -9,5 +9,6 @@ namespace BeerConf.Web.Application.Events.ViewModels
         public string Name { get; set; }
         public string Description { get; set; }
         public string Place { get; set; }
+        public int? PlacesCount { get; set; }
     }
 }

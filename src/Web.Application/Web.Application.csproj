@@ -57,6 +57,7 @@
     <Compile Include="Account\Services\Impl\ContextUserProvider.cs" />
     <Compile Include="Account\Services\IContextUserProvider.cs" />
     <Compile Include="Events\Criteria\NextEvent.cs" />
+    <Compile Include="Maybe.cs" />
     <Compile Include="Events\ViewModels\EventDetailsViewModel.cs" />
     <Compile Include="Events\Forms\Metadata\NewEventMetadata.cs" />
     <Compile Include="Events\Forms\Participate.cs" />

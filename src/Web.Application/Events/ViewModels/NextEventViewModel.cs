@@ -11,5 +11,7 @@ namespace BeerConf.Web.Application.Events.ViewModels
         public string Name { get; set; }
 
         public bool IsParticipating { get; set; }
+
+        public int? PlacesCount { get; set; }
     }
 }

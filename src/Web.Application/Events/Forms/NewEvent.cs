@@ -9,6 +9,7 @@
         public DateTime End { get; set; }
         public string Place { get; set; }
         public string Name { get; set; }
+        public int? MaxPlaces { get; set; }
         public string Description { get; set; }
     }
 }
