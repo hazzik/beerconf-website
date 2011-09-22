@@ -1,20 +1,11 @@
-﻿/// <reference path="jquery-1.6.2.js" />
-/// <reference path="jquery-ui-1.8.14.js" />
+﻿/// <reference path="jquery-1.6.4.js" />
+/// <reference path="jquery-ui-1.8.16.js" />
 
 (function ($) {
-    function replaceDashWithUpperCase(str) {
-        return str.split(/\-([a-z])/).map(function (x, i) { return (i % 2 == 1) ? x.toUpperCase() : x; }).join('');
-    };
-    function getOptions(selector) {
-        var data = $(selector).data();
-        var options = {};
-        for (var k in data) {
-            options[replaceDashWithUpperCase(k)] = data[k];
-        }
-    }
     $(function () {
         $('[role=datepicker]').each(function () {
-            $(this).datepicker(getOptions(this));
+            var self = $(this);
+            self.datepicker(self.data());
         });
         $('[role=datetimepicker]').each(function () {
             var format = function (val) {
@@ -27,7 +18,7 @@
             var values = e.val().split(/[ :]/);
             var date = $('<input />')
                 .val(values[0])
-                .datepicker(getOptions(this));
+                .datepicker(e.data());
 
             var hour = $('<select>');
             var i;

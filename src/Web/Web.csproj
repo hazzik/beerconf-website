@@ -53,22 +53,23 @@
     <Reference Include="dotless.Core">
       <HintPath>..\..\packages\dotless.1.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FluentMigrator">
-      <HintPath>..\..\packages\FluentMigrator.0.9.1.0\lib\FluentMigrator.dll</HintPath>
+    <Reference Include="FluentMigrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentMigrator.1.0.1.0\lib\40\FluentMigrator.dll</HintPath>
     </Reference>
-    <Reference Include="FluentMigrator.Runner">
-      <HintPath>..\..\packages\FluentMigrator.0.9.1.0\tools\FluentMigrator.Runner.dll</HintPath>
+    <Reference Include="FluentMigrator.Runner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\FluentMigrator.1.0.1.0\tools\FluentMigrator.Runner.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions, Version=2.0.0.497, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions, Version=2.0.0.500, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.2.0.0.497\lib\net40\MvcExtensions.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.0.0.500\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.497, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.500, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.497\lib\net40\MvcExtensions.Windsor.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.500\lib\net40\MvcExtensions.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -130,62 +131,21 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.min.css">
-      <DependentUpon>jquery.ui.accordion.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.min.css">
-      <DependentUpon>jquery.ui.all.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.min.css">
-      <DependentUpon>jquery.ui.autocomplete.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.min.css">
-      <DependentUpon>jquery.ui.base.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.min.css">
-      <DependentUpon>jquery.ui.button.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.min.css">
-      <DependentUpon>jquery.ui.core.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.min.css">
-      <DependentUpon>jquery.ui.datepicker.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.min.css">
-      <DependentUpon>jquery.ui.dialog.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.min.css">
-      <DependentUpon>jquery.ui.progressbar.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.min.css">
-      <DependentUpon>jquery.ui.resizable.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.min.css">
-      <DependentUpon>jquery.ui.selectable.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.min.css">
-      <DependentUpon>jquery.ui.slider.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.min.css">
-      <DependentUpon>jquery.ui.tabs.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.min.css">
-      <DependentUpon>jquery.ui.theme.css</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -219,10 +179,11 @@
     <Content Include="Scripts\BeerConf.min.js">
       <DependentUpon>BeerConf.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery-1.6.2.js" />
-    <Content Include="Scripts\jquery-1.6.2.min.js" />
-    <Content Include="Scripts\jquery-ui-1.8.14.js" />
-    <Content Include="Scripts\jquery-ui-1.8.14.min.js" />
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.min.js" />
     <Content Include="Scripts\jquery.ui.datepicker-ru.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
