@@ -3,7 +3,7 @@
     using FluentMigrator;
 
     [Migration(201107122012)]
-    public class Migration201107122012 : Migration
+    public class Migration201107122012 : AutoReversingMigration
     {
         public override void Up()
         {
@@ -21,13 +21,6 @@
 
             Create.Table("USERS")
                 .WithColumn("USER_ID").AsInt32().PrimaryKey().Identity().References("FK_EVENT_PARTICIPANTS_USERS", "EVENT_PARTICIPANTS", new[] {"USER_ID"});
-        }
-
-        public override void Down()
-        {
-            Delete.Table("EVENT_PARTICIPANTS");
-            Delete.Table("EVENTS");
-            Delete.Table("USERS");
         }
     }
 }
