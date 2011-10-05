@@ -3,8 +3,10 @@
 	using System;
 	using System.Linq;
 	using System.Reflection;
+	using System.Web;
 	using Xunit;
 
+    
     public class CheckFormsAndHandlersIntegration
 	{
 		[Fact]

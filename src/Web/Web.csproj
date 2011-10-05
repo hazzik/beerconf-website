@@ -48,7 +48,7 @@
       <HintPath>..\..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Windsor, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Castle.Windsor.2.5.3\lib\NET40\Castle.Windsor.dll</HintPath>
+      <HintPath>..\..\packages\Castle.Windsor.2.5.4\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="dotless.Core">
       <HintPath>..\..\packages\dotless.1.1.0\lib\dotless.Core.dll</HintPath>
@@ -63,13 +63,13 @@
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions, Version=2.0.0.500, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions, Version=2.0.0.505, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.2.0.0.500\lib\net40\MvcExtensions.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.0.0.505\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.500, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.505, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.500\lib\net40\MvcExtensions.Windsor.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.505\lib\net40\MvcExtensions.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
