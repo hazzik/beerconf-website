@@ -24,7 +24,7 @@
 
         public virtual void Handle(SignUp command)
         {
-            IQueryBuilderWithPart<User> part = query.For<User>();
+            var part = query.For<User>();
             User rowCount = part.With(new FindByLoginOrEmail {LoginOrEmail = command.Login}) ??
                             part.With(new FindByLoginOrEmail {LoginOrEmail = command.Email});
 

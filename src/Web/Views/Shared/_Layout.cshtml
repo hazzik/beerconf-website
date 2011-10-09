@@ -1,17 +1,20 @@
 ﻿@using BeerConf.Web.Application.Account.Forms
-@using Brandy.Web
+@using Brandy.Web.Require
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/reset.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Site.less")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/themes/base/jquery.ui.all.min.css")" rel="stylesheet" type="text/css" />
+    @Html.RequireStyleSheet(
+        Url.Content("~/Content/reset.css"),
+        Url.Content("~/Content/Site.less"),
+        Url.Content("~/Content/themes/base/minified/jquery.ui.all.min.css"))
 
     @Html.RequireScript(
         Url.Content("~/Scripts/jquery-1.6.4.min.js"), 
         Url.Content("~/Scripts/jquery-ui-1.8.16.min.js"))
+
+    @Html.OutputRequiredStyleSheets()
     @Html.OutputRequiredScripts()
 </head>
 
