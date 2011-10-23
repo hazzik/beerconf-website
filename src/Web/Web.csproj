@@ -44,8 +44,8 @@
     <Reference Include="Brandy.Web">
       <HintPath>..\..\lib\Brandy\Brandy.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Brandy.Web.Require">
-      <HintPath>..\..\packages\Web.Require.1.0.0.0\lib\NET4\Brandy.Web.Require.dll</HintPath>
+    <Reference Include="Brandy.Web.Require, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Web.Require.1.0.6.0\lib\NET4\Brandy.Web.Require.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
       <HintPath>..\..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
@@ -66,13 +66,20 @@
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions, Version=2.0.0.505, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.2.0.0.505\lib\net40\MvcExtensions.dll</HintPath>
+    <Reference Include="MVC Foolproof Validation">
+      <HintPath>..\..\packages\foolproof.0.9.4048\lib\MVC Foolproof Validation.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.505, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions, Version=2.0.0.517, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.505\lib\net40\MvcExtensions.Windsor.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.0.0.517\lib\net40\MvcExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcExtensions.Foolproof, Version=2.0.0.517, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.0.0.517\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.517, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.517\lib\net40\MvcExtensions.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -182,6 +189,8 @@
     <Content Include="Scripts\BeerConf.min.js">
       <DependentUpon>BeerConf.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\head.load.js" />
+    <Content Include="Scripts\head.load.min.js" />
     <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
@@ -192,6 +201,9 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\BeerConf.js" />
+    <Content Include="Scripts\mvcfoolproof.unobtrusive.min.js" />
+    <Content Include="Scripts\MvcFoolproofJQueryValidation.min.js" />
+    <Content Include="Scripts\MvcFoolproofValidation.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

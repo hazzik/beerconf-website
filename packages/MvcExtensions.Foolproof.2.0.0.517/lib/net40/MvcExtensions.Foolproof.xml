@@ -1,0 +1,1161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MvcExtensions.Foolproof</name>
+    </assembly>
+    <members>
+        <member name="T:MvcExtensions.RequiredIfRegExMatchAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-regex-match validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfRegExMatchAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfRegExMatchAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfRegExMatchAttributeMetadata.Expression">
+            <summary>
+            Gets or sets the expression.
+            </summary>
+            <value>The expression.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfModelMetadataItemBuilderExtensions.RequiredIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,Foolproof.Operator,System.Object)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="operator"></param>
+            <param name="dependentValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfModelMetadataItemBuilderExtensions.RequiredIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,Foolproof.Operator,System.Object,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="operator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfModelMetadataItemBuilderExtensions.RequiredIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,Foolproof.Operator,System.Object,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="operator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfModelMetadataItemBuilderExtensions.RequiredIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,Foolproof.Operator,System.Object,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="dependentValue"></param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <param name="operator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfModelMetadataItemBuilderExtensions.RequiredIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,Foolproof.Operator,System.Object,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <param name="operator"></param>
+            <param name="dependentValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfNotRegExMatchModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfNotRegExMatchAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotRegExMatchModelMetadataItemBuilderExtensions.RequiredIfNotRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotRegExMatchModelMetadataItemBuilderExtensions.RequiredIfNotRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessage">The error message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotRegExMatchModelMetadataItemBuilderExtensions.RequiredIfNotRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessage">The error message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotRegExMatchModelMetadataItemBuilderExtensions.RequiredIfNotRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotRegExMatchModelMetadataItemBuilderExtensions.RequiredIfNotRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfRegExMatchModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfRegExMatchAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfRegExMatchModelMetadataItemBuilderExtensions.RequiredIfRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfRegExMatchModelMetadataItemBuilderExtensions.RequiredIfRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessage">The error message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfRegExMatchModelMetadataItemBuilderExtensions.RequiredIfRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessage">The error message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfRegExMatchModelMetadataItemBuilderExtensions.RequiredIfRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfRegExMatchModelMetadataItemBuilderExtensions.RequiredIfRegExMatch``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfTrueAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-true validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfTrueAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfTrueAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfNotEmptyAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-not-empty validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotEmptyAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfNotEmptyAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfNotRegExMatchAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-not-regex-match validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotRegExMatchAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfNotRegExMatchAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfNotRegExMatchAttributeMetadata.Expression">
+            <summary>
+            Gets or sets the expression.
+            </summary>
+            <value>The expression.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfNotAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-not validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfNotAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfNotAttributeMetadata.DependentValue">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfFalseAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-empty validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfFalseAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfFalseAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfEmptyAttributeMetadata">
+            <summary>
+            Represents a class to store required-if-empty validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfEmptyAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfEmptyAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.EqualToModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.EqualToAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.EqualToModelMetadataItemBuilderExtensions.EqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.EqualToModelMetadataItemBuilderExtensions.EqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.EqualToModelMetadataItemBuilderExtensions.EqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.EqualToModelMetadataItemBuilderExtensions.EqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.EqualToModelMetadataItemBuilderExtensions.EqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.GreaterThanModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.GreaterThanAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanModelMetadataItemBuilderExtensions.GreaterThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanModelMetadataItemBuilderExtensions.GreaterThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanModelMetadataItemBuilderExtensions.GreaterThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanModelMetadataItemBuilderExtensions.GreaterThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanModelMetadataItemBuilderExtensions.GreaterThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.GreaterThanOrEqualToAttributeMetadata">
+            <summary>
+            Represents a class to store grater-than or equal validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanOrEqualToAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.GreaterThanOrEqualToAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.LessThanAttributeMetadata">
+            <summary>
+            Represents a class to store less-then validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.LessThanAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.LessThanAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.LessThanOrEqualToAttributeMetadata">
+            <summary>
+            Represents a class to store less-than or equal validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.LessThanOrEqualToAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.LessThanOrEqualToAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.NotEqualToAttributeMetadata">
+            <summary>
+            Represents a class to store not-equal validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.NotEqualToAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.NotEqualToAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.RegularExpressionIfAttributeMetadata">
+            <summary>
+            Represents a class to store regular-expression-if validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RegularExpressionIfAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RegularExpressionIfAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="P:MvcExtensions.RegularExpressionIfAttributeMetadata.Expression">
+            <summary>
+            Gets or sets the expression.
+            </summary>
+            <value>The expression.</value>
+        </member>
+        <member name="P:MvcExtensions.RegularExpressionIfAttributeMetadata.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>The operator.</value>
+        </member>
+        <member name="P:MvcExtensions.RegularExpressionIfAttributeMetadata.DependentValue">
+            <summary>
+            Gets or sets the dependent value.
+            </summary>
+            <value>The dependent value.</value>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfAttributeMetadata">
+            <summary>
+            Represents a class to store required-if validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfAttributeMetadata.DependentValue">
+            <summary>
+            Gets or sets the dependent value.
+            </summary>
+            <value>The dependent value.</value>
+        </member>
+        <member name="P:MvcExtensions.RequiredIfAttributeMetadata.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+            <value>The operator.</value>
+        </member>
+        <member name="T:MvcExtensions.GreaterThanAttributeMetadata">
+            <summary>
+            Represents a class to store equal-to validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.GreaterThanAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.EqualToAttributeMetadata">
+            <summary>
+            Represents a class to store equal-to validation metadata.
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.EqualToAttributeMetadata.CreateValidatorCore(MvcExtensions.ExtendedModelMetadata,System.Web.Mvc.ControllerContext)">
+            <summary>
+            Creates the validator.
+            </summary>
+            <param name="modelMetadata">The model metadata.</param>
+            <param name="context">The context.</param>
+            <returns></returns>
+        </member>
+        <member name="P:MvcExtensions.EqualToAttributeMetadata.OtherProperty">
+            <summary>
+            Gets or sets the other property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:MvcExtensions.GreaterThanOrEqualToModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.GreaterThanOrEqualToAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanOrEqualToModelMetadataItemBuilderExtensions.GreaterThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanOrEqualToModelMetadataItemBuilderExtensions.GreaterThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanOrEqualToModelMetadataItemBuilderExtensions.GreaterThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanOrEqualToModelMetadataItemBuilderExtensions.GreaterThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.GreaterThanOrEqualToModelMetadataItemBuilderExtensions.GreaterThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.LessThanModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.LessThanAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.LessThanModelMetadataItemBuilderExtensions.LessThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanModelMetadataItemBuilderExtensions.LessThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanModelMetadataItemBuilderExtensions.LessThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanModelMetadataItemBuilderExtensions.LessThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanModelMetadataItemBuilderExtensions.LessThan``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.LessThanOrEqualToModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.LessThanOrEqualToAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.LessThanOrEqualToModelMetadataItemBuilderExtensions.LessThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanOrEqualToModelMetadataItemBuilderExtensions.LessThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanOrEqualToModelMetadataItemBuilderExtensions.LessThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanOrEqualToModelMetadataItemBuilderExtensions.LessThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.LessThanOrEqualToModelMetadataItemBuilderExtensions.LessThanOrEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.NotEqualToModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.NotEqualToAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.NotEqualToModelMetadataItemBuilderExtensions.NotEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.NotEqualToModelMetadataItemBuilderExtensions.NotEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.NotEqualToModelMetadataItemBuilderExtensions.NotEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.NotEqualToModelMetadataItemBuilderExtensions.NotEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.NotEqualToModelMetadataItemBuilderExtensions.NotEqualTo``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RegularExpressionIfModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RegularExpressionIfAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RegularExpressionIfModelMetadataItemBuilderExtensions.RegularExpressionIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,Foolproof.Operator,System.Object)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="operator"></param>
+            <param name="dependentValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RegularExpressionIfModelMetadataItemBuilderExtensions.RegularExpressionIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,Foolproof.Operator,System.Object,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="operator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RegularExpressionIfModelMetadataItemBuilderExtensions.RegularExpressionIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,Foolproof.Operator,System.Object,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="operator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RegularExpressionIfModelMetadataItemBuilderExtensions.RegularExpressionIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,Foolproof.Operator,System.Object,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="dependentValue"></param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <param name="expression"></param>
+            <param name="operator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RegularExpressionIfModelMetadataItemBuilderExtensions.RegularExpressionIf``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String,Foolproof.Operator,System.Object,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="expression"></param>
+            <param name="operator"></param>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfEmptyModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfEmptyAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfEmptyModelMetadataItemBuilderExtensions.RequiredIfEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfEmptyModelMetadataItemBuilderExtensions.RequiredIfEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfEmptyModelMetadataItemBuilderExtensions.RequiredIfEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfEmptyModelMetadataItemBuilderExtensions.RequiredIfEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfEmptyModelMetadataItemBuilderExtensions.RequiredIfEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfFalseModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfFalseAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfFalseModelMetadataItemBuilderExtensions.RequiredIfFalse``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfFalseModelMetadataItemBuilderExtensions.RequiredIfFalse``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfFalseModelMetadataItemBuilderExtensions.RequiredIfFalse``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfFalseModelMetadataItemBuilderExtensions.RequiredIfFalse``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfFalseModelMetadataItemBuilderExtensions.RequiredIfFalse``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfNotEmptyModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfNotEmptyAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotEmptyModelMetadataItemBuilderExtensions.RequiredIfNotEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotEmptyModelMetadataItemBuilderExtensions.RequiredIfNotEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotEmptyModelMetadataItemBuilderExtensions.RequiredIfNotEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotEmptyModelMetadataItemBuilderExtensions.RequiredIfNotEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotEmptyModelMetadataItemBuilderExtensions.RequiredIfNotEmpty``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfNotModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfNotAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotModelMetadataItemBuilderExtensions.RequiredIfNot``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Object)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="dependentValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotModelMetadataItemBuilderExtensions.RequiredIfNot``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Object,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotModelMetadataItemBuilderExtensions.RequiredIfNot``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Object,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotModelMetadataItemBuilderExtensions.RequiredIfNot``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Object,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="dependentValue"></param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfNotModelMetadataItemBuilderExtensions.RequiredIfNot``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Object,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="dependentValue"></param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MvcExtensions.RequiredIfTrueModelMetadataItemBuilderExtensions">
+            <summary>
+            Adds validation for <see cref="T:Foolproof.RequiredIfTrueAttribute"/>
+            </summary>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfTrueModelMetadataItemBuilderExtensions.RequiredIfTrue``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfTrueModelMetadataItemBuilderExtensions.RequiredIfTrue``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfTrueModelMetadataItemBuilderExtensions.RequiredIfTrue``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String})">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="self">The instance.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfTrueModelMetadataItemBuilderExtensions.RequiredIfTrue``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.RequiredIfTrueModelMetadataItemBuilderExtensions.RequiredIfTrue``2(MvcExtensions.ModelMetadataItemBuilder{``0,``1},System.String,System.Func{System.String},System.Type,System.String)">
+            <summary>
+            Sets the range of value, this comes into action when is <code>Required</code> is <code>true</code>.
+            </summary>
+            <param name="self">The instance.</param>
+            <param name="otherProperty">The other property.</param>
+            <param name="errorMessage">The error message.</param>
+            <param name="errorMessageResourceType">Type of the error message resource.</param>
+            <param name="errorMessageResourceName">Name of the error message resource.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

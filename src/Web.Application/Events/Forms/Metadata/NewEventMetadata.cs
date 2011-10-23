@@ -10,13 +10,15 @@
                 .DisplayName("Начало")
                 .EditFormat("{0:g}")
                 .ApplyFormatInEditMode()
-                .Template("DateTimePicker");
+                .Template("DateTimePicker")
+                .LessThanOrEqualTo("End");
 
             Configure(x => x.End)
                 .DisplayName("Окончание")
                 .EditFormat("{0:g}")
                 .ApplyFormatInEditMode()
-                .Template("DateTimePicker");
+                .Template("DateTimePicker")
+                .GreaterThanOrEqualTo("Begin");
 
             Configure(x => x.Name)
                 .DisplayName("Название встречи");

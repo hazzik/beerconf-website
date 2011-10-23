@@ -12,7 +12,10 @@
 
     @Html.RequireScript(
         Url.Content("~/Scripts/jquery-1.6.4.min.js"), 
-        Url.Content("~/Scripts/jquery-ui-1.8.16.min.js"))
+        Url.Content("~/Scripts/jquery-ui-1.8.16.min.js"),
+        Url.Content("~/Scripts/jquery.validate.min.js"),
+        Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js"),
+        Url.Content("~/Scripts/mvcfoolproof.unobtrusive.min.js"))
 
     @Html.OutputRequiredStyleSheets()
     @Html.OutputRequiredScripts()
