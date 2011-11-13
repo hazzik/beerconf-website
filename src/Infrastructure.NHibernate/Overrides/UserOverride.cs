@@ -9,15 +9,6 @@ namespace BeerConf.Infrastructure.NHibernate.Overrides
         public void Override(AutoMapping<User> mapping)
         {
             mapping.Table("USERS");
-
-            mapping.Component(x => x.Password,
-                              x =>
-                                  {
-                                      x.Map(p => p.Hash)
-                                          .Column("PASSWORD_HASH");
-                                      x.Map(p => p.Salt)
-                                          .Column("PASSWORD_SALT");
-                                  });
         }
     }
 }
