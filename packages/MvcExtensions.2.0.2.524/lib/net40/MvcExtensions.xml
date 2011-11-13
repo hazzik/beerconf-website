@@ -2319,69 +2319,24 @@
             Defines a base class which acts as an adapter for IoC Container.
             </summary>
         </member>
-        <member name="T:MvcExtensions.ExtendedDependencyResolver">
-            <summary>
-            This class is a helper that provides a default implementation
-            for most of the methods of <see cref="T:System.Web.Mvc.IDependencyResolver"/>.
-            </summary>
-        </member>
-        <member name="M:MvcExtensions.ExtendedDependencyResolver.GetService(System.Type)">
-            <summary>
-            Implementation of <see cref="M:System.IServiceProvider.GetService(System.Type)"/>.
-            </summary>
-            <param name="serviceType">The requested service.</param>
-            <returns>The requested object.</returns>
-        </member>
-        <member name="M:MvcExtensions.ExtendedDependencyResolver.GetService(System.Type,System.String)">
-            <summary>
-            Gets the service.
-            </summary>
-            <param name="serviceType">Type of the service.</param>
-            <param name="key">The key.</param>
-            <returns></returns>
-        </member>
-        <member name="M:MvcExtensions.ExtendedDependencyResolver.GetServices(System.Type)">
-            <summary>
-            Gets the services.
-            </summary>
-            <param name="serviceType">Type of the service.</param>
-            <returns></returns>
-        </member>
-        <member name="M:MvcExtensions.ExtendedDependencyResolver.DoGetService(System.Type,System.String)">
-            <summary>
-            Gets the service.
-            </summary>
-            <param name="serviceType">Type of the service.</param>
-            <param name="key">The key.</param>
-            <returns></returns>
-        </member>
-        <member name="M:MvcExtensions.ExtendedDependencyResolver.DoGetServices(System.Type)">
-            <summary>
-            Gets the services.
-            </summary>
-            <param name="serviceType">Type of the service.</param>
-            <returns></returns>
-        </member>
         <member name="T:MvcExtensions.IServiceRegistrar">
             <summary>
             Represents an interface which is used to register services.
             </summary>
         </member>
-        <member name="M:MvcExtensions.IServiceRegistrar.RegisterType(System.String,System.Type,System.Type,MvcExtensions.LifetimeType)">
+        <member name="M:MvcExtensions.IServiceRegistrar.RegisterType(System.Type,System.Type,MvcExtensions.LifetimeType)">
             <summary>
             Registers the service and its implementation with the lifetime behavior.
             </summary>
-            <param name="key">The key.</param>
             <param name="serviceType">Type of the service.</param>
             <param name="implementationType">Type of the implementation.</param>
             <param name="lifetime">The lifetime of the service.</param>
             <returns></returns>
         </member>
-        <member name="M:MvcExtensions.IServiceRegistrar.RegisterInstance(System.String,System.Type,System.Object)">
+        <member name="M:MvcExtensions.IServiceRegistrar.RegisterInstance(System.Type,System.Object)">
             <summary>
             Registers the instance as singleton.
             </summary>
-            <param name="key">The key.</param>
             <param name="serviceType">Type of the service.</param>
             <param name="instance">The instance.</param>
             <returns></returns>
@@ -2397,32 +2352,19 @@
             </summary>
             <param name="instance">The instance.</param>
         </member>
-        <member name="M:MvcExtensions.ContainerAdapter.Finalize">
-            <summary>
-            Releases unmanaged resources and performs other cleanup operations before the
-            <see cref="T:MvcExtensions.ContainerAdapter"/> is reclaimed by garbage collection.
-            </summary>
-        </member>
-        <member name="M:MvcExtensions.ContainerAdapter.Dispose">
-            <summary>
-            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-            </summary>
-        </member>
-        <member name="M:MvcExtensions.ContainerAdapter.RegisterType(System.String,System.Type,System.Type,MvcExtensions.LifetimeType)">
+        <member name="M:MvcExtensions.ContainerAdapter.RegisterType(System.Type,System.Type,MvcExtensions.LifetimeType)">
             <summary>
             Registers the service and its implementation with the lifetime behavior.
             </summary>
-            <param name="key">The key.</param>
             <param name="serviceType">Type of the service.</param>
             <param name="implementationType">Type of the implementation.</param>
             <param name="lifetime">The lifetime of the service.</param>
             <returns></returns>
         </member>
-        <member name="M:MvcExtensions.ContainerAdapter.RegisterInstance(System.String,System.Type,System.Object)">
+        <member name="M:MvcExtensions.ContainerAdapter.RegisterInstance(System.Type,System.Object)">
             <summary>
             Registers the instance as singleton.
             </summary>
-            <param name="key">The key.</param>
             <param name="serviceType">Type of the service.</param>
             <param name="instance">The instance.</param>
             <returns></returns>
@@ -2433,23 +2375,18 @@
             </summary>
             <param name="instance">The instance.</param>
         </member>
-        <member name="M:MvcExtensions.ContainerAdapter.DisposeCore">
-            <summary>
-            Releases unmanaged and - optionally - managed resources
-            </summary>
-        </member>
-        <member name="T:MvcExtensions.ExtendedDependencyResolverExtensions">
-            <summary>
-            Defines an static class which contains extension methods of <see cref="T:MvcExtensions.ExtendedDependencyResolver"/>.
-            </summary>
-        </member>
-        <member name="M:MvcExtensions.ExtendedDependencyResolverExtensions.GetService``1(MvcExtensions.ExtendedDependencyResolver,System.String)">
+        <member name="M:MvcExtensions.ContainerAdapter.GetService(System.Type)">
             <summary>
             Gets the service.
             </summary>
-            <typeparam name="TService">The type of the service.</typeparam>
-            <param name="instance">The instance.</param>
-            <param name="key">The key.</param>
+            <param name="serviceType">Type of the service.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MvcExtensions.ContainerAdapter.GetServices(System.Type)">
+            <summary>
+            Gets the services.
+            </summary>
+            <param name="serviceType">Type of the service.</param>
             <returns></returns>
         </member>
         <member name="T:MvcExtensions.LifetimeType">
@@ -2477,7 +2414,7 @@
             Defines an static class which contains extension methods of <see cref="T:MvcExtensions.IServiceRegistrar"/>.
             </summary>
         </member>
-        <member name="M:MvcExtensions.ServiceRegistrarExtensions.RegisterInstance``1(MvcExtensions.IServiceRegistrar,System.Object)">
+        <member name="M:MvcExtensions.ServiceRegistrarExtensions.RegisterInstance``1(MvcExtensions.IServiceRegistrar,``0)">
             <summary>
             Registers the instance as a singleton service.
             </summary>

@@ -50,9 +50,9 @@
             Defines a <see cref="T:System.Web.HttpApplication"/> which uses <seealso cref="T:MvcExtensions.Windsor.WindsorBootstrapper"/>.
             </summary>
         </member>
-        <member name="M:MvcExtensions.Windsor.WindsorMvcApplication.#ctor">
+        <member name="M:MvcExtensions.Windsor.WindsorMvcApplication.Init">
             <summary>
-            Initializes a new instance of the <see cref="T:MvcExtensions.Windsor.WindsorMvcApplication"/> class.
+            Executes custom initialization code after all event handler modules have been added.
             </summary>
         </member>
         <member name="M:MvcExtensions.Windsor.WindsorMvcApplication.CreateBootstrapper">
@@ -72,21 +72,19 @@
             </summary>
             <param name="container">The container.</param>
         </member>
-        <member name="M:MvcExtensions.Windsor.WindsorAdapter.RegisterType(System.String,System.Type,System.Type,MvcExtensions.LifetimeType)">
+        <member name="M:MvcExtensions.Windsor.WindsorAdapter.RegisterType(System.Type,System.Type,MvcExtensions.LifetimeType)">
             <summary>
             Registers the type.
             </summary>
-            <param name="key">The key.</param>
             <param name="serviceType">Type of the service.</param>
             <param name="implementationType">Type of the implementation.</param>
             <param name="lifetime">The lifetime of the service.</param>
             <returns></returns>
         </member>
-        <member name="M:MvcExtensions.Windsor.WindsorAdapter.RegisterInstance(System.String,System.Type,System.Object)">
+        <member name="M:MvcExtensions.Windsor.WindsorAdapter.RegisterInstance(System.Type,System.Object)">
             <summary>
             Registers the instance.
             </summary>
-            <param name="key">The key.</param>
             <param name="serviceType">Type of the service.</param>
             <param name="instance">The instance.</param>
             <returns></returns>
@@ -97,15 +95,14 @@
             </summary>
             <param name="instance">The instance.</param>
         </member>
-        <member name="M:MvcExtensions.Windsor.WindsorAdapter.DoGetService(System.Type,System.String)">
+        <member name="M:MvcExtensions.Windsor.WindsorAdapter.GetService(System.Type)">
             <summary>
             Gets the service.
             </summary>
             <param name="serviceType">Type of the service.</param>
-            <param name="key">The key.</param>
             <returns></returns>
         </member>
-        <member name="M:MvcExtensions.Windsor.WindsorAdapter.DoGetServices(System.Type)">
+        <member name="M:MvcExtensions.Windsor.WindsorAdapter.GetServices(System.Type)">
             <summary>
             Gets the services.
             </summary>

@@ -69,17 +69,17 @@
     <Reference Include="MVC Foolproof Validation">
       <HintPath>..\..\packages\foolproof.0.9.4048\lib\MVC Foolproof Validation.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions, Version=2.0.0.517, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions, Version=2.0.2.524, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.2.0.0.517\lib\net40\MvcExtensions.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.0.2.524\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions.Foolproof, Version=2.0.0.517, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions.Foolproof, Version=2.0.2.524, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.0.0.517\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.0.2.524\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions.Windsor, Version=2.0.0.517, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions.Windsor, Version=2.0.2.524, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.0.517\lib\net40\MvcExtensions.Windsor.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Windsor.2.0.2.524\lib\net40\MvcExtensions.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
