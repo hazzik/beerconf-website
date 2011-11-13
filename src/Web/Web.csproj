@@ -54,7 +54,7 @@
       <HintPath>..\..\packages\Castle.Windsor.2.5.4\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
     <Reference Include="dotless.Core">
-      <HintPath>..\..\packages\dotless.1.1.0\lib\dotless.Core.dll</HintPath>
+      <HintPath>..\..\packages\dotless.1.2.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
     <Reference Include="FluentMigrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FluentMigrator.1.0.1.0\lib\40\FluentMigrator.dll</HintPath>
