@@ -1,4 +1,4 @@
-﻿/// <reference path="jquery-1.6.4.js" />
+﻿/// <reference path="jquery-1.7.js" />
 /// <reference path="jquery-ui-1.8.16.js" />
 
 (function ($) {
