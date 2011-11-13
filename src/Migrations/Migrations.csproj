@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migration201111131404.cs" />
     <Compile Include="Migration201107122012.cs" />
     <Compile Include="Migration201107122225.cs" />
     <Compile Include="Migration201107201117.cs" />

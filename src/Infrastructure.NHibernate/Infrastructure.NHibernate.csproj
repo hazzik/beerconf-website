@@ -64,6 +64,7 @@
     <Compile Include="Queries\Account\FindByLoginOrEmailQuery.cs" />
     <Compile Include="Queries\Account\FindByLoginQuery.cs" />
     <Compile Include="Queries\Events\NextEventQuery.cs" />
+    <Compile Include="Conventions\PrimaryKeyGeneratorConvention.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
