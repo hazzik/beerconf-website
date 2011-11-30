@@ -5,7 +5,7 @@
     using global::NHibernate.Cfg;
     using global::NHibernate.Tool.hbm2ddl;
 
-    internal class LiveDbDump
+    public class LiveDbDump
     {
         [Fact]
         public void GenerateCreationScript()

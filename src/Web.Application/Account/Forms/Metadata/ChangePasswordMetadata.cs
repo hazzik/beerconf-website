@@ -1,6 +1,8 @@
 ﻿namespace BeerConf.Web.Application.Account.Forms.Metadata
 {
-    public class ChangePasswordMetadata : MvcExtensions.ModelMetadataConfiguration<ChangePassword>
+    using MvcExtensions;
+
+    public class ChangePasswordMetadata : ModelMetadataConfiguration<ChangePassword>
     {
         public ChangePasswordMetadata()
         {

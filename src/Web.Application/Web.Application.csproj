@@ -42,13 +42,17 @@
     <Reference Include="Microsoft.Web.Mvc">
       <HintPath>..\..\packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions, Version=2.0.2.524, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ee6190c4449c24bc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.2.0.2.524\lib\net40\MvcExtensions.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.5.0-rc2\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions.Foolproof, Version=2.0.2.524, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="MvcExtensions.Foolproof, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.0.2.524\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.5.0-rc3\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
+    </Reference>
+    <Reference Include="OoMapper, Version=0.2.0.25, Culture=neutral, PublicKeyToken=889bb259bb1214bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\OoMapper.0.2.0.25\lib\net4\OoMapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,12 +73,13 @@
     <Compile Include="Events\ViewModels\EventParticipant.cs" />
     <Compile Include="Events\ViewModels\Metadata\AdminEventDetailsMetadata.cs" />
     <Compile Include="Events\ViewModels\Metadata\EventDetailsMetadataBase.cs" />
+    <Compile Include="Infrastructure\RegisterMappings.cs" />
     <Compile Include="Maybe.cs" />
     <Compile Include="Events\ViewModels\EventDetails.cs" />
     <Compile Include="Events\Forms\Metadata\NewEventMetadata.cs" />
     <Compile Include="Events\Forms\Participate.cs" />
     <Compile Include="Events\Forms\Handlers\ParticipateHandler.cs" />
-    <Compile Include="Events\ViewModels\Metadata\EventDetailsViewModelMetadata.cs" />
+    <Compile Include="Events\ViewModels\Metadata\EventDetailsMetadata.cs" />
     <Compile Include="Events\ViewModels\NextEvent.cs" />
     <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
     <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />

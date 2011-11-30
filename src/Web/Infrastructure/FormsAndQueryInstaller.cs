@@ -18,7 +18,7 @@ namespace BeerConf.Web.Infrastructure
             BasedOnDescriptor formHandlers = AllTypes.FromAssemblyNamed("BeerConf.Web.Application")
                 .BasedOn(typeof (IFormHandler<>))
                 .WithService.AllInterfaces()
-                .Configure(x => x.LifeStyle.Transient);
+                .LifestyleTransient();
 
             container.Register(formHandlers,
                                Component.For<IFormHandlerFactory>().AsFactory());
@@ -26,7 +26,7 @@ namespace BeerConf.Web.Infrastructure
             BasedOnDescriptor queries = AllTypes.FromAssemblyNamed("BeerConf.Infrastructure.NHibernate")
                 .BasedOn(typeof (IQuery<,>))
                 .WithService.AllInterfaces()
-                .Configure(x => x.LifeStyle.Transient);
+                .LifestyleTransient();
 
             container.Register(queries,
                                Component.For(typeof(IQueryFor<>)).ImplementedBy(typeof(QueryFor<>)).LifeStyle.Transient,

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using Brandy.Core;
 
     public class Event : IEntity
@@ -35,6 +36,11 @@
         {
             if (MaxPlaces == null || MaxPlaces > participants.Count)
                 participants.Add(user);
+        }
+
+        public virtual int? AvailablePlaces()
+        {
+            return MaxPlaces - Participants.Count();
         }
     }
 }

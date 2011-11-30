@@ -1,24 +1,25 @@
 ﻿namespace BeerConf.Web
 {
-    using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
+    using Application.Infrastructure;
     using Migrations;
     using MvcExtensions;
     using MvcExtensions.Windsor;
-    
+
     public class MvcApplication : WindsorMvcApplication
     {
-    	public MvcApplication()
-    	{
-       		Bootstrapper.BootstrapperTasks
-    			.Include<RegisterModelMetadata>()
-    			.Include<RegisterControllers>() /*
+        public MvcApplication()
+        {
+            Bootstrapper.BootstrapperTasks
+                .Include<RegisterModelMetadata>()
+                .Include<RegisterControllers>()
+                .Include<RegisterMappings>()/*
                          .Include<ConfigureFilterAttributes>()
                          .Include<ConfigureModelBinders>()*/
-    			/*.Include<RegisterMapProfiles>()
+                /*.Include<RegisterMapProfiles>()
 				.Include<RegisterRoutes>()*/;
-    	}
+        }
 
         private static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
@@ -27,7 +28,6 @@
 
         private static void RegisterRoutes(RouteCollection routes)
         {
-            
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
@@ -46,7 +46,6 @@
             RegisterGlobalFilters(GlobalFilters.Filters);
 
             RegisterRoutes(RouteTable.Routes);
-
-		}
+        }
     }
 }

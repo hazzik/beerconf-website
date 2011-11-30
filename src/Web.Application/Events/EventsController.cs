@@ -1,8 +1,6 @@
 ﻿namespace BeerConf.Web.Application.Events
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Web.Mvc;
     using Account.Services;
     using Account.Services.Impl;
@@ -10,6 +8,7 @@
     using Brandy.Web.Forms;
     using Domain.Entities;
     using Forms;
+    using OoMapper;
     using ViewModels;
 
     public class EventsController : FormControllerBase
@@ -53,24 +52,9 @@
 
         private EventDetails ToViewModel(Event @event)
         {
-            EventDetails model = !User.IsInRole("Admin")
-                                     ? new EventDetails()
-                                     : new AdminEventDetails
-                                           {
-                                               Participants = GetEventParticipants(@event)
-                                           };
-            model.Name = @event.Name;
-            model.Begin = @event.Begin;
-            model.End = @event.End;
-            model.Description = @event.Description;
-            model.Place = @event.Place;
-            model.PlacesCount = @event.MaxPlaces - @event.Participants.Count();
-            return model;
-        }
-
-        private static IEnumerable<EventParticipant> GetEventParticipants(Event @event)
-        {
-            return @event.Participants.Select(ToViewModel).ToArray();
+            return !User.IsInRole("Admin")
+                       ? Mapper.Map<Event, EventDetails>(@event)
+                       : Mapper.Map<Event, AdminEventDetails>(@event);
         }
 
         private static EventParticipant ToViewModel(User user)

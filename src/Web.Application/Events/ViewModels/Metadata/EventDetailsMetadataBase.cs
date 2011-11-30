@@ -25,7 +25,7 @@ namespace BeerConf.Web.Application.Events.ViewModels.Metadata
                 .Order(400)
                 .DisplayName("Место проведения");
 
-            Configure(x => x.PlacesCount)
+            Configure(x => x.AvailablePlaces)
                 .Order(500)
                 .DisplayName("Мест осталось")
                 .NullDisplayText("Не ограничено");
