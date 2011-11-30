@@ -2,7 +2,7 @@ namespace BeerConf.Web.Application.Events.ViewModels
 {
     using System;
 
-    public class NextEventViewModel
+    public class NextEvent
     {
         public int Id { get; set; }
 

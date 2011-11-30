@@ -6,19 +6,20 @@ namespace BeerConf.Infrastructure.NHibernate.Queries.Events
     using Domain.Entities;
     using Web.Application.Events.Criteria;
     using Web.Application.Events.ViewModels;
+    using NextEvent = Web.Application.Events.ViewModels.NextEvent;
 
-    public class NextEventQuery : NHibernateLinqQueryBase<NextEventViewModel, NextEvent>
+    public class NextEventQuery : NHibernateLinqQueryBase<NextEvent, Web.Application.Events.Criteria.NextEvent>
     {
         public NextEventQuery(ILinqProvider linqProvider) : base(linqProvider)
         {
         }
 
-        public override NextEventViewModel Ask(NextEvent criterion)
+        public override NextEvent Ask(Web.Application.Events.Criteria.NextEvent criterion)
         {
             return Query<Event>()
                 .Where(x => x.Begin >= DateTime.Today)
                 .OrderBy(x => x.Begin)
-                .Select(x => new NextEventViewModel
+                .Select(x => new NextEvent
                                  {
                                      Id = x.Id,
                                      Begin = x.Begin,

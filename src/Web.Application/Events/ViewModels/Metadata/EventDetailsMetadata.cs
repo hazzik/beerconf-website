@@ -2,9 +2,9 @@
 {
     using MvcExtensions;
 
-    public class EventDetailsViewModelMetadata : ModelMetadataConfiguration<EventDetailsViewModel>
+    public class EventDetailsMetadata : ModelMetadataConfiguration<EventDetails>
     {
-        public EventDetailsViewModelMetadata()
+        public EventDetailsMetadata()
         {
             Configure(x => x.Begin)
                 .DisplayName("Начало")
@@ -23,6 +23,9 @@
             Configure(x => x.PlacesCount)
                 .DisplayName("Мест осталось")
                 .NullDisplayText("Не ограничено");
+
+            Configure(x => x.Participants)
+                .DisplayName("Участники");
 
             Configure(x => x.Description)
                 .DisplayName("Описание");

@@ -1,13 +1,13 @@
 ﻿namespace BeerConf.Web.Application.Events
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Web.Mvc;
     using Account.Services;
     using Account.Services.Impl;
     using Brandy.Core;
     using Brandy.Web.Forms;
-    using Criteria;
     using Domain.Entities;
     using Forms;
     using ViewModels;
@@ -28,8 +28,8 @@
         [ChildActionOnly]
         public ActionResult NextEvent()
         {
-            NextEventViewModel model = query.For<NextEventViewModel>()
-                .With(new NextEvent(contextUserProvider.ContextUser(false)));
+            NextEvent model = query.For<NextEvent>()
+                .With(new Criteria.NextEvent(contextUserProvider.ContextUser(false)));
 
             return PartialView(model);
         }
@@ -48,19 +48,36 @@
 
         public ActionResult Details(int id)
         {
-            return View(ToEventDetailsViewModel(eventRepository.Get(id)));
+            return View(ToViewModel(eventRepository.Get(id)));
         }
 
-        private static EventDetailsViewModel ToEventDetailsViewModel(Event @event)
+        private EventDetails ToViewModel(Event @event)
         {
-            return new EventDetailsViewModel
+            return new EventDetails
                        {
                            Name = @event.Name,
                            Begin = @event.Begin,
                            End = @event.End,
                            Description = @event.Description,
                            Place = @event.Place,
-                           PlacesCount = @event.MaxPlaces - @event.Participants.Count()
+                           PlacesCount = @event.MaxPlaces - @event.Participants.Count(),
+                           Participants = GetEventParticipants(@event)
+                       };
+        }
+
+        private IEnumerable<EventParticipant> GetEventParticipants(Event @event)
+        {
+            if (User.IsInRole("Admin"))
+                return @event.Participants.Select(ToViewModel).ToArray();
+            return Enumerable.Empty<EventParticipant>();
+        }
+
+        private static EventParticipant ToViewModel(User user)
+        {
+            return new EventParticipant
+                       {
+                           Login = user.Login,
+                           Email = user.EMail,
                        };
         }
 
