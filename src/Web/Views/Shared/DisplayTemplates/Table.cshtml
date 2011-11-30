@@ -1,0 +1,53 @@
+﻿@using System.Collections;
+@using BeerConf.Web.Application
+
+@model IEnumerable
+
+@functions {
+    Type GetElementType()
+    {
+        return TypeUtil.GetElementTypeOfEnumerable(ViewData.ModelMetadata.ModelType);
+    }
+
+    private object GetElement()
+    {
+        if (Model != null)
+        {
+            var x = Model.Cast<object>().FirstOrDefault();
+            if (x != null)
+            {
+                return x;
+            }
+        }
+        return Activator.CreateInstance(GetElementType());
+    }
+}
+@{
+    var x = GetElement();
+
+    var properties = ModelMetadata.FromLambdaExpression(_ => x, ViewData).Properties.Where(p => p.ShowForDisplay).ToArray();
+}
+<table class="datatable" cellspacing="0" cellpadding="0">
+	<thead>
+		<tr>
+			@foreach(var property in properties) {        
+				<th>
+					@property.GetDisplayName().Replace("_", " ")
+				</th>
+			}
+		</tr>
+	</thead>
+	<tbody>
+    @{    
+        var random = new Random();
+		foreach (object item in Model)
+		{
+            int index = random.Next();
+            using(Html.CollectionItem(index))
+            {
+			    @Html.DisplayFor(_ => item, "TableRow", "")
+            }
+        }
+    }
+	</tbody>
+</table>

@@ -118,6 +118,7 @@ ul.list li {
 }
 .display-field {
   padding: 5px;
+  clear: both;
 }
 .field-validation-error {
   display: block;

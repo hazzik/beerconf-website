@@ -39,6 +39,9 @@
       <HintPath>..\..\lib\Brandy\Brandy.Web.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Mvc">
+      <HintPath>..\..\packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="MvcExtensions, Version=2.0.2.524, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\MvcExtensions.2.0.2.524\lib\net40\MvcExtensions.dll</HintPath>
@@ -60,8 +63,12 @@
     <Compile Include="Account\Forms\Handlers\ChangePasswordHandler.cs" />
     <Compile Include="Account\Services\Impl\ContextUserProvider.cs" />
     <Compile Include="Account\Services\IContextUserProvider.cs" />
+    <Compile Include="CollectionItemHtmlHelperExtensions.cs" />
     <Compile Include="Events\Criteria\NextEvent.cs" />
+    <Compile Include="Events\ViewModels\AdminEventDetails.cs" />
     <Compile Include="Events\ViewModels\EventParticipant.cs" />
+    <Compile Include="Events\ViewModels\Metadata\AdminEventDetailsMetadata.cs" />
+    <Compile Include="Events\ViewModels\Metadata\EventDetailsMetadataBase.cs" />
     <Compile Include="Maybe.cs" />
     <Compile Include="Events\ViewModels\EventDetails.cs" />
     <Compile Include="Events\Forms\Metadata\NewEventMetadata.cs" />
@@ -94,6 +101,7 @@
     <Compile Include="Metadata\DatePickerSettings.cs" />
     <Compile Include="Metadata\ModelMetadateExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">

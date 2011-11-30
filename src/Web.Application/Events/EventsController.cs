@@ -53,23 +53,24 @@
 
         private EventDetails ToViewModel(Event @event)
         {
-            return new EventDetails
-                       {
-                           Name = @event.Name,
-                           Begin = @event.Begin,
-                           End = @event.End,
-                           Description = @event.Description,
-                           Place = @event.Place,
-                           PlacesCount = @event.MaxPlaces - @event.Participants.Count(),
-                           Participants = GetEventParticipants(@event)
-                       };
+            EventDetails model = !User.IsInRole("Admin")
+                                     ? new EventDetails()
+                                     : new AdminEventDetails
+                                           {
+                                               Participants = GetEventParticipants(@event)
+                                           };
+            model.Name = @event.Name;
+            model.Begin = @event.Begin;
+            model.End = @event.End;
+            model.Description = @event.Description;
+            model.Place = @event.Place;
+            model.PlacesCount = @event.MaxPlaces - @event.Participants.Count();
+            return model;
         }
 
-        private IEnumerable<EventParticipant> GetEventParticipants(Event @event)
+        private static IEnumerable<EventParticipant> GetEventParticipants(Event @event)
         {
-            if (User.IsInRole("Admin"))
-                return @event.Participants.Select(ToViewModel).ToArray();
-            return Enumerable.Empty<EventParticipant>();
+            return @event.Participants.Select(ToViewModel).ToArray();
         }
 
         private static EventParticipant ToViewModel(User user)

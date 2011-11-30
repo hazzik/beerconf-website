@@ -1,0 +1,13 @@
+﻿<tr>
+@{
+    var properties = ViewData.ModelMetadata.Properties
+        .Where(pm => pm.ShowForDisplay && !ViewData.TemplateInfo.Visited(pm))
+        .ToArray();
+    foreach (var prop in properties)
+    {
+        <td>
+            @Html.Display(prop.PropertyName)
+        </td>
+    }
+}
+</tr>

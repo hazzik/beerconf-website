@@ -1,34 +1,6 @@
 ﻿namespace BeerConf.Web.Application.Events.ViewModels.Metadata
 {
-    using MvcExtensions;
-
-    public class EventDetailsMetadata : ModelMetadataConfiguration<EventDetails>
+    public class EventDetailsMetadata : EventDetailsMetadataBase<EventDetails>
     {
-        public EventDetailsMetadata()
-        {
-            Configure(x => x.Begin)
-                .DisplayName("Начало")
-                .Format("{0:g}");
-
-            Configure(x => x.End)
-                .DisplayName("Окончание")
-                .Format("{0:g}");
-
-            Configure(x => x.Name)
-                .DisplayName("Название встречи");
-
-            Configure(x => x.Place)
-                .DisplayName("Место проведения");
-
-            Configure(x => x.PlacesCount)
-                .DisplayName("Мест осталось")
-                .NullDisplayText("Не ограничено");
-
-            Configure(x => x.Participants)
-                .DisplayName("Участники");
-
-            Configure(x => x.Description)
-                .DisplayName("Описание");
-        }
     }
 }
