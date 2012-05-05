@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using Brandy.Core;
+    using Brandy.Security;
+    using Brandy.Security.Entities;
 
     public class Event : IEntity
     {

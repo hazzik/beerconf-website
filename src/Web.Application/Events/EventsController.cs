@@ -2,9 +2,12 @@
 {
     using System;
     using System.Web.Mvc;
-    using Account.Services;
-    using Account.Services.Impl;
+
     using Brandy.Core;
+    using Brandy.Security.Entities;
+    using Brandy.Security.Web;
+    using Brandy.Security.Web.Services;
+    using Brandy.Security.Web.Services.Impl;
     using Brandy.Web.Forms;
     using Domain.Entities;
     using Forms;
@@ -33,13 +36,13 @@
             return PartialView(model);
         }
 
-        [CustomAuthorize(RoleType.Admin)]
+        [BrandyAuthorize(RoleType.Admin)]
         public ActionResult New()
         {
             return View(new NewEvent {Begin = DateTime.Now, End = DateTime.Now});
         }
 
-        [HttpPost, CustomAuthorize(RoleType.Admin)]
+        [HttpPost, BrandyAuthorize(RoleType.Admin)]
         public ActionResult New(NewEvent form)
         {
             return Handle(form, RedirectToAction("New"));

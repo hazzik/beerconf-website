@@ -1,8 +1,13 @@
 ﻿namespace BeerConf.Web
 {
+    using System.Web.Hosting;
     using System.Web.Mvc;
     using System.Web.Routing;
+
     using Application.Infrastructure;
+
+    using Brandy.Web;
+
     using Migrations;
     using MvcExtensions;
     using MvcExtensions.Windsor;
@@ -42,6 +47,10 @@
             MigrationsRunner.Run();
 
             AreaRegistration.RegisterAllAreas();
+
+            var pathProvider = new EmbeddedResourceVirtualPathProvider();
+            pathProvider.AddNamespaceMapping("/Views/Account", "Brandy.Security.Web.Views.Account");
+            HostingEnvironment.RegisterVirtualPathProvider(pathProvider);
 
             RegisterGlobalFilters(GlobalFilters.Filters);
 

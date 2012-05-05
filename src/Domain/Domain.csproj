@@ -34,19 +34,14 @@
     <Reference Include="Brandy.Core">
       <HintPath>..\..\lib\Brandy\Brandy.Core.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="Brandy.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Brandy\Brandy.Security.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ByteArrayExtensions.cs" />
     <Compile Include="Entities\Event.cs" />
-    <Compile Include="Entities\Password.cs" />
-    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,6 +4,9 @@
     using Brandy.Core;
     using Brandy.NHibernate;
     using Brandy.NHibernate.Conventions;
+    using Brandy.Security;
+    using Brandy.Security.Entities;
+
     using Domain.Entities;
     using FluentNHibernate;
     using FluentNHibernate.Automapping;
@@ -23,14 +26,14 @@
                 .UseReflectionOptimizer()
                 .AdoNetBatchSize(100);
 
-            var automappingConfiguration = new StoreConfiguration();
+            var autoPersistenceModel = AutoMap.AssemblyOf<User>(new StoreConfiguration())
+                .AddMappingsFromAssemblyOf<Event>()
+                .Conventions.AddFromAssemblyOf<INHibernateConfigurator>()
+                .Conventions.AddFromAssemblyOf<NHibernateConfigurator>()
+                .UseOverridesFromAssemblyOf<NHibernateConfigurator>();
 
             return Fluently.Configure()
-                .Mappings(x => x.AutoMappings.Add(AutoMap.AssemblyOf<User>(automappingConfiguration)
-                                                      .Conventions.AddFromAssemblyOf<INHibernateConfigurator>()
-                                                      .Conventions.AddFromAssemblyOf<NHibernateConfigurator>()
-                                                      .UseOverridesFromAssemblyOf<NHibernateConfigurator>()
-                                   ))
+                .Mappings(x => x.AutoMappings.Add(autoPersistenceModel))
                 .ExposeConfiguration(c => c.SetProperty("generate_statistics", "true"))
                 .CurrentSessionContext("managed_web")
                 .Database(db)

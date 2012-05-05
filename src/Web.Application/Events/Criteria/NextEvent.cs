@@ -1,6 +1,9 @@
 namespace BeerConf.Web.Application.Events.Criteria
 {
     using Brandy.Core;
+    using Brandy.Security;
+    using Brandy.Security.Entities;
+
     using Domain.Entities;
 
     public class NextEvent : ICriterion

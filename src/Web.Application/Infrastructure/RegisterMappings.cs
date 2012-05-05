@@ -1,5 +1,8 @@
 ﻿namespace BeerConf.Web.Application.Infrastructure
 {
+    using Brandy.Security;
+    using Brandy.Security.Entities;
+
     using Domain.Entities;
     using Events.ViewModels;
     using MvcExtensions;

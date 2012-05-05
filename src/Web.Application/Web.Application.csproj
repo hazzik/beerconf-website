@@ -12,6 +12,8 @@
     <AssemblyName>BeerConf.Web.Application</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,12 +37,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Brandy\Brandy.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Brandy.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Brandy\Brandy.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Brandy.Security.Web">
+      <HintPath>..\..\lib\Brandy\Brandy.Security.Web.dll</HintPath>
+    </Reference>
     <Reference Include="Brandy.Web">
       <HintPath>..\..\lib\Brandy\Brandy.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Web.Mvc">
-      <HintPath>..\..\packages\Mvc3Futures.3.0.20105.0\lib\Microsoft.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="MvcExtensions, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ee6190c4449c24bc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -56,17 +61,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\AccountController.cs" />
-    <Compile Include="Account\Forms\ChangePassword.cs" />
-    <Compile Include="Account\Forms\Handlers\ChangePasswordHandler.cs" />
-    <Compile Include="Account\Services\Impl\ContextUserProvider.cs" />
-    <Compile Include="Account\Services\IContextUserProvider.cs" />
     <Compile Include="CollectionItemHtmlHelperExtensions.cs" />
     <Compile Include="Events\Criteria\NextEvent.cs" />
     <Compile Include="Events\ViewModels\AdminEventDetails.cs" />
@@ -81,24 +79,6 @@
     <Compile Include="Events\Forms\Handlers\ParticipateHandler.cs" />
     <Compile Include="Events\ViewModels\Metadata\EventDetailsMetadata.cs" />
     <Compile Include="Events\ViewModels\NextEvent.cs" />
-    <Compile Include="Account\Forms\Handlers\SignOutHandler.cs" />
-    <Compile Include="Account\Forms\Handlers\SignInHandler.cs" />
-    <Compile Include="Account\Forms\Handlers\SignUpHandler.cs" />
-    <Compile Include="Account\Forms\SignOut.cs" />
-    <Compile Include="Account\Forms\SignIn.cs" />
-    <Compile Include="Account\Forms\Metadata\ChangePasswordMetadata.cs" />
-    <Compile Include="Account\Forms\Metadata\SignInMetadata.cs" />
-    <Compile Include="Account\Forms\Metadata\SignUpMetadata.cs" />
-    <Compile Include="Account\Forms\SignUp.cs" />
-    <Compile Include="Account\Criteria\FindByLogin.cs" />
-    <Compile Include="Account\Criteria\FindByLoginOrEmail.cs" />
-    <Compile Include="Account\Services\IAuthenticationService.cs" />
-    <Compile Include="Account\Services\Impl\AccountEntry.cs" />
-    <Compile Include="Account\Services\Impl\CustomAutentificationModule.cs" />
-    <Compile Include="Account\Services\Impl\CustomIdentity.cs" />
-    <Compile Include="Account\Services\Impl\FormsAuthenticationService.cs" />
-    <Compile Include="Account\Services\Impl\RoleType.cs" />
-    <Compile Include="CustomAuthorizeAttribute.cs" />
     <Compile Include="Events\EventsController.cs" />
     <Compile Include="Events\Forms\Handlers\NewEventHandler.cs" />
     <Compile Include="Events\Forms\NewEvent.cs" />
@@ -117,7 +97,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

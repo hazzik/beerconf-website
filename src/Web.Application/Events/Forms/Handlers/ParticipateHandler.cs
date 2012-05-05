@@ -1,7 +1,7 @@
 namespace BeerConf.Web.Application.Events.Forms.Handlers
 {
-    using Account.Services;
     using Brandy.Core;
+    using Brandy.Security.Web.Services;
     using Brandy.Web.Forms;
     using Domain.Entities;
 
