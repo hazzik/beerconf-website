@@ -43,6 +43,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Brandy\Brandy.Security.dll</HintPath>
     </Reference>
+    <Reference Include="Brandy.Security.NHibernate">
+      <HintPath>..\..\lib\Brandy\Brandy.Security.NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\..\packages\FluentNHibernate-hazzik.1.4.1.0\lib\FluentNHibernate.dll</HintPath>
     </Reference>

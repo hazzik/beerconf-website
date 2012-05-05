@@ -4,8 +4,8 @@
     using Brandy.Core;
     using Brandy.NHibernate;
     using Brandy.NHibernate.Conventions;
-    using Brandy.Security;
     using Brandy.Security.Entities;
+    using Brandy.Security.NHibernate.Overrides;
 
     using Domain.Entities;
     using FluentNHibernate;
@@ -16,11 +16,9 @@
 
     public class NHibernateConfigurator : INHibernateConfigurator
     {
-        #region INHibernateConfigurator Members
-
         public Configuration Configure()
         {
-            MsSqlConfiguration db = MsSqlConfiguration.MsSql2008
+            var db = MsSqlConfiguration.MsSql2008
                 .ConnectionString(x => x.FromConnectionStringWithKey("BeerConf"))
                 .ShowSql()
                 .UseReflectionOptimizer()
@@ -30,6 +28,7 @@
                 .AddMappingsFromAssemblyOf<Event>()
                 .Conventions.AddFromAssemblyOf<INHibernateConfigurator>()
                 .Conventions.AddFromAssemblyOf<NHibernateConfigurator>()
+                .UseOverridesFromAssemblyOf<UserOverride>()
                 .UseOverridesFromAssemblyOf<NHibernateConfigurator>();
 
             return Fluently.Configure()
@@ -39,10 +38,6 @@
                 .Database(db)
                 .BuildConfiguration();
         }
-
-        #endregion
-
-        #region Nested type: StoreConfiguration
 
         private class StoreConfiguration : DefaultAutomappingConfiguration
         {
@@ -66,7 +61,5 @@
                 return member.Name == "Id";
             }
         }
-
-        #endregion
     }
 }
