@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollectionItemHtmlHelperExtensions.cs" />
+    <Compile Include="Errors\ErrorsController.cs" />
     <Compile Include="Events\Criteria\NextEvent.cs" />
     <Compile Include="Events\ViewModels\AdminEventDetails.cs" />
     <Compile Include="Events\ViewModels\EventParticipant.cs" />
