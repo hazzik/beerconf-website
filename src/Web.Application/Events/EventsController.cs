@@ -30,7 +30,7 @@
         [ChildActionOnly]
         public ActionResult NextEvent()
         {
-            NextEvent model = query.For<NextEvent>()
+            var model = query.For<NextEvent>()
                 .With(new Criteria.NextEvent(contextUserProvider.ContextUser(false)));
 
             return PartialView(model);
