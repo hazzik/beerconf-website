@@ -47,17 +47,20 @@
     <Reference Include="Brandy.Web">
       <HintPath>..\..\lib\Brandy\Brandy.Web.dll</HintPath>
     </Reference>
-    <Reference Include="MvcExtensions, Version=2.5.0.0, Culture=neutral, PublicKeyToken=ee6190c4449c24bc, processorArchitecture=MSIL">
+    <Reference Include="MVC Foolproof Validation">
+      <HintPath>..\..\packages\foolproof.0.9.4517\lib\MVC Foolproof Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcExtensions, Version=2.5.1.0, Culture=neutral, PublicKeyToken=ee6190c4449c24bc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.2.5.0-rc2\lib\net40\MvcExtensions.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.2.5.1\lib\net40\MvcExtensions.dll</HintPath>
     </Reference>
     <Reference Include="MvcExtensions.Foolproof, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.5.0-rc3\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
+      <HintPath>..\..\packages\MvcExtensions.Foolproof.2.5.0\lib\net40\MvcExtensions.Foolproof.dll</HintPath>
     </Reference>
-    <Reference Include="OoMapper, Version=0.2.0.25, Culture=neutral, PublicKeyToken=889bb259bb1214bf, processorArchitecture=MSIL">
+    <Reference Include="OoMapper, Version=0.2.0.27, Culture=neutral, PublicKeyToken=889bb259bb1214bf, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\OoMapper.0.2.0.25\lib\net4\OoMapper.dll</HintPath>
+      <HintPath>..\..\packages\OoMapper.0.2.0.27\lib\net4\OoMapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
