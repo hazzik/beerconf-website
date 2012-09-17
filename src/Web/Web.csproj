@@ -150,6 +150,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\reset.min.css">
       <DependentUpon>reset.css</DependentUpon>
@@ -193,6 +199,8 @@
       <DependentUpon>BeerConf.js</DependentUpon>
     </Content>
     <Content Include="Scripts\BeerConf.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\head.load.js" />
     <Content Include="Scripts\head.load.min.js" />
     <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
@@ -207,6 +215,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\mvcfoolproof.unobtrusive.min.js" />
     <Content Include="Scripts\MvcFoolproofJQueryValidation.min.js" />
     <Content Include="Scripts\MvcFoolproofValidation.min.js" />
@@ -263,6 +272,9 @@
   <ItemGroup>
     <Content Include="Views\Shared\DisplayTemplates\Table.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\TableRow.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\EditorTemplates\Object.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

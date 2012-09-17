@@ -7,12 +7,16 @@
     <title>@ViewBag.Title</title>
     @Html.RequireStyleSheet(
         Url.Content("~/Content/reset.css"),
-        Url.Content("~/Content/Site.less"),
-        Url.Content("~/Content/themes/base/minified/jquery.ui.all.min.css"))
+        Url.Content("~/Content/themes/base/minified/jquery.ui.all.min.css"),
+        Url.Content("~/Content/bootstrap.min.css"),
+        Url.Content("~/Content/bootstrap-responsive.min.css"),
+        Url.Content("~/Content/Site.less"))
 
     @Html.RequireScript(
+        Url.Content("~/Scripts/modernizr-2.6.2.js"), 
         Url.Content("~/Scripts/jquery-1.7.1.min.js"), 
         Url.Content("~/Scripts/jquery-ui-1.8.18.min.js"),
+        Url.Content("~/Scripts/bootstrap.min.js"),
         Url.Content("~/Scripts/jquery.validate.min.js"),
         Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js"),
         Url.Content("~/Scripts/mvcfoolproof.unobtrusive.min.js"))
@@ -20,28 +24,45 @@
     @Html.OutputRequiredStyleSheets()
     @Html.OutputRequiredScripts()
 </head>
-
-<body>
-    <div id="head">
-        <div id="title">beerconf.ru</div>
-        <div id="log-on-information">@Html.Partial("_LogOnPartial", new SignIn())</div>
-    </div>
-    <div id="main">
-        <div id="left-column">
-            <div id="main-menu">@Html.Partial("_Navigation")</div>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+ 
+                        <a class="brand" href="@Url.Action("Index", "Home")" id="title">beerconf.ru</a>
+ 
+                        <div class="nav-collapse">
+                            <ul class="nav pull-right">
+                                <li class="divider-vertical"></li>
+                                @Html.Partial("_LogOnPartial")
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>   
+        <div id="main">
+            <div id="left-column">
+                <div id="main-menu">@Html.Partial("_Navigation")</div>
+            </div>
+            <div id="center-column">
+                <div id="content" class="container">@RenderBody()</div>
+            </div>
+            <div id="right-column">
+                @Html.Action("NextEvent", "Events")
+            </div>
+            <br class="clear"/>
         </div>
-        <div id="center-column">
-            <div id="content">@RenderBody()</div>
+        <div id="footer">
+            <div id="bottom-menu">@Html.Partial("_Navigation")</div>
+            <div id="copyright">&copy; beerconf 2011-2012</div>
         </div>
-        <div id="right-column">
-            @Html.Action("NextEvent", "Events")
-        </div>
-        <br class="clear"/>
-    </div>
-    <div id="footer">
-        <div id="bottom-menu">@Html.Partial("_Navigation")</div>
-        <div id="copyright">&copy; beerconf 2011-2012</div>
-    </div>
-<!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function (w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter8127637 = new Ya.Metrika({ id: 8127637, enableAll: true }); } catch (e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/8127637" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-</body>
+        <!-- Yandex.Metrika counter --><div style="display:none;"><script type="text/javascript">(function (w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter8127637 = new Ya.Metrika({ id: 8127637, enableAll: true }); } catch (e) { } }); })(window, "yandex_metrika_callbacks");</script></div><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script><noscript><div><img src="//mc.yandex.ru/watch/8127637" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+    </body>
 </html>
