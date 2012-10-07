@@ -33,19 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Brandy.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Brandy.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Brandy\Brandy.Core.dll</HintPath>
+      <HintPath>..\..\packages\Brandy.Core.0.1.0.0\lib\net40\Brandy.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Brandy.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Brandy.Security, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\Brandy\Brandy.Security.dll</HintPath>
+      <HintPath>..\..\packages\Brandy.Security.0.1.0.0\lib\net40\Brandy.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Brandy.Security.Web">
-      <HintPath>..\..\lib\Brandy\Brandy.Security.Web.dll</HintPath>
+    <Reference Include="Brandy.Security.Web, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Brandy.Security.Web.0.1.0.0\lib\net40\Brandy.Security.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Brandy.Web">
-      <HintPath>..\..\lib\Brandy\Brandy.Web.dll</HintPath>
+    <Reference Include="Brandy.Web, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Brandy.Web.0.1.0.0\lib\net40\Brandy.Web.dll</HintPath>
     </Reference>
     <Reference Include="MVC Foolproof Validation">
       <HintPath>..\..\packages\foolproof.0.9.4517\lib\MVC Foolproof Validation.dll</HintPath>
